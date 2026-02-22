@@ -196,12 +196,10 @@ def reset():
 
     return {
         "state": STATE_GLIDE,
-        "boat_x": 250,  # Port A position
-        "boat_target_x": 400,  # Will set during docking
+        "boat_x": 0,  # Will be computed in STATE_GLIDE
+        "boat_target_x": 300,  # Will set during docking
         "boat_y": 54,
 
-        "glide_start_x": 250,  # Port A
-        "glide_end_x": 450,    # Port B
         "glide_duration": 2.5,  # seconds
 
         "player": pygame.Rect(120, 420, PLAYER_SIZE, PLAYER_SIZE),
@@ -306,8 +304,20 @@ while True:
         elapsed = now - game["state_time"]
         t = min(1.0, elapsed / game["glide_duration"])
         
+        # Compute glide positions dynamically based on port centers
+        cove_center_x = 450
+        total_port_width = PORT_SIZE * 2 + PORT_GAP
+        left_port_x = cove_center_x - total_port_width // 2
+        right_port_x = left_port_x + PORT_SIZE + PORT_GAP
+        
+        left_port_center = left_port_x + PORT_SIZE // 2
+        right_port_center = right_port_x + PORT_SIZE // 2
+        
+        glide_start = left_port_center - GLIDE_BOAT_WIDTH // 2
+        glide_end = right_port_center - GLIDE_BOAT_WIDTH // 2
+        
         # Smooth interpolation from Port A to Port B
-        game["boat_x"] = game["glide_start_x"] + (game["glide_end_x"] - game["glide_start_x"]) * t
+        game["boat_x"] = glide_start + (glide_end - glide_start) * t
         game["boat_y"] = 210  # Position over the water in glide scene
         
         # When glide is complete, transition to docking scene
@@ -406,13 +416,6 @@ while True:
         # Establishing shot: C-shaped cove with ports
         draw_cove_background()
         
-        # Port positioning calculations
-        # Horizontal centering within cove
-        cove_center_x = 450
-        total_port_width = PORT_SIZE * 2 + PORT_GAP
-        left_port_x = cove_center_x - total_port_width // 2
-        right_port_x = left_port_x + PORT_SIZE + PORT_GAP
-        
         # Vertical embedding: southern beach arc
         # Water ellipse southern edge: cove_center_y + water_height // 2
         # Port top edge aligns to water boundary, bottom half in beach
@@ -420,21 +423,57 @@ while True:
         water_height = 330
         port_y = cove_center_y + water_height // 2 - PORT_SIZE
         
+        # Port positioning calculations
+        # Horizontal centering within cove
+        cove_center_x = 450
+        total_port_width = PORT_SIZE * 2 + PORT_GAP
+        left_port_x = cove_center_x - total_port_width // 2
+        right_port_x = left_port_x + PORT_SIZE + PORT_GAP
+        
         # Port A (left, damaged) and Port B (right, intact)
         draw_port(left_port_x, port_y, is_intact=False)
         draw_port(right_port_x, port_y, is_intact=True)
         
-        # Draw boat gliding over water (smaller than port)
+        # Draw stylized sailboat gliding over water
         boat_glide_y = game["boat_y"]
-        pygame.draw.rect(
-            screen,
-            (120, 70, 30),
-            (game["boat_x"], boat_glide_y, GLIDE_BOAT_WIDTH, GLIDE_BOAT_HEIGHT)
-        )
-        # Small circle for crew
-        crew_x = game["boat_x"] + int(GLIDE_BOAT_WIDTH * 0.7)
-        crew_y = boat_glide_y - int(GLIDE_BOAT_HEIGHT * 0.3)
-        pygame.draw.circle(screen, (255, 220, 180), (crew_x, crew_y), 3)
+        boat_center_x = game["boat_x"] + GLIDE_BOAT_WIDTH // 2
+        
+        # Trapezoid hull
+        hull_height = int(GLIDE_BOAT_HEIGHT * 0.35)
+        hull_y = boat_glide_y + int(GLIDE_BOAT_HEIGHT * 0.5)
+        hull_top_width = GLIDE_BOAT_WIDTH
+        hull_bottom_width = int(GLIDE_BOAT_WIDTH * 0.7)
+        
+        hull_points = [
+            (boat_center_x - hull_top_width // 2, hull_y),
+            (boat_center_x + hull_top_width // 2, hull_y),
+            (boat_center_x + hull_bottom_width // 2, hull_y + hull_height),
+            (boat_center_x - hull_bottom_width // 2, hull_y + hull_height),
+        ]
+        pygame.draw.polygon(screen, (120, 70, 30), hull_points)
+        
+        # Equilateral triangle sail geometry
+        side_length = GLIDE_BOAT_WIDTH
+        triangle_height = int(side_length * 0.866)  # sqrt(3)/2
+        
+        mast_top_y = hull_y - triangle_height
+        base_y = hull_y
+        
+        # Triangle vertices
+        left_base = (boat_center_x - side_length // 2, base_y)
+        right_base = (boat_center_x + side_length // 2, base_y)
+        apex = (boat_center_x, mast_top_y)
+        
+        # Draw left sail (left half of triangle)
+        left_sail_points = [apex, left_base, (boat_center_x, base_y)]
+        pygame.draw.polygon(screen, (255, 255, 255), left_sail_points)
+        
+        # Draw right sail (right half of triangle)
+        right_sail_points = [apex, (boat_center_x, base_y), right_base]
+        pygame.draw.polygon(screen, (255, 255, 255), right_sail_points)
+        
+        # Draw mast (white, 2 pixels wide)
+        pygame.draw.line(screen, (255, 255, 255), apex, (boat_center_x, base_y), 2)
         
         # Title
         title = FONT.render("Tiny Cove — Opening: Cove at Dawn", True, COLOR_TEXT)
