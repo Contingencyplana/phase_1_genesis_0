@@ -1,4 +1,3 @@
-
 # tiny_cove.py
 # Tiny Cove — Ignition Triangle II (Split Version, v0.1.1 patch)
 #
@@ -34,6 +33,12 @@ LASH_SECONDS = 1.2
 
 AUTO_LASH_DELAY = 2.0  # seconds after requirements met -> auto depart (prevents soft-lock)
 
+# Glide scene scale hierarchy
+PORT_SIZE = 90
+PORT_GAP = PORT_SIZE // 3
+GLIDE_BOAT_WIDTH = int(PORT_SIZE * 0.9)
+GLIDE_BOAT_HEIGHT = int(PORT_SIZE * 0.5)
+
 COLOR_BG = (26, 34, 52)
 COLOR_WATER = (55, 105, 150)
 COLOR_DOCK = (85, 60, 40)
@@ -43,6 +48,15 @@ COLOR_DIM = (160, 160, 160)
 COLOR_CHECK = (105, 215, 120)
 COLOR_BAD = (230, 90, 90)
 
+# Cove scene colors
+COLOR_BEACH = (210, 180, 140)
+COLOR_COAST = (100, 150, 80)
+COLOR_OCEAN = (30, 70, 110)
+COLOR_PORT_INTACT = (100, 75, 50)
+COLOR_PORT_DAMAGED = (70, 40, 30)
+COLOR_PORT_CRACK = (180, 60, 60)
+
+STATE_GLIDE = "glide"
 STATE_DOCKING = "docking"
 STATE_ALLOCATION = "allocation"
 STATE_LASHING = "lashing"
@@ -71,6 +85,91 @@ def draw_boat(x, y, children, loaded):
         pygame.draw.rect(screen, (195, 170, 110), (x + 20 + i * 22, y - 6, 18, 12))
 
 
+def draw_cove_background():
+    """
+    Draw the curved C-shaped cove establishing shot background using ellipses.
+    - Open ocean at top (north entrance)
+    - Curved beach forming the C shape
+    - Water inside the C
+    - Green coast surrounding the cove
+    """
+    # Fill entire screen with green coast (default terrain)
+    screen.fill(COLOR_COAST)
+    
+    # Cove dimensions - ellipse centered higher, slightly larger
+    cove_center_x = 450
+    cove_center_y = 260
+    beach_outer_width = 750
+    beach_outer_height = 450
+    water_width = 590
+    water_height = 330
+    
+    # Draw beach as curved C using outer ellipse
+    beach_rect = pygame.Rect(
+        cove_center_x - beach_outer_width // 2,
+        cove_center_y - beach_outer_height // 2,
+        beach_outer_width,
+        beach_outer_height
+    )
+    pygame.draw.ellipse(screen, COLOR_BEACH, beach_rect)
+    
+    # Draw water as curved interior using inner ellipse
+    water_rect = pygame.Rect(
+        cove_center_x - water_width // 2,
+        cove_center_y - water_height // 2,
+        water_width,
+        water_height
+    )
+    pygame.draw.ellipse(screen, COLOR_WATER, water_rect)
+    
+    # Draw open ocean at the north opening (top of screen) LAST
+    # so it erases the top of beach and water ellipses to create the C mouth
+    pygame.draw.rect(screen, COLOR_OCEAN, (0, 0, WIDTH, 140))
+
+
+def draw_port(x, y, is_intact):
+    """
+    Draw a port square.
+    is_intact: True for Port B, False for Port A (damaged)
+    """
+    port_size = PORT_SIZE
+    
+    if is_intact:
+        # Port B: intact, neutral dock color
+        pygame.draw.rect(screen, COLOR_PORT_INTACT, (x, y, port_size, port_size))
+        pygame.draw.rect(screen, (80, 60, 40), (x, y, port_size, port_size), 2)
+    else:
+        # Port A: damaged, dark with red undertone
+        pygame.draw.rect(screen, COLOR_PORT_DAMAGED, (x, y, port_size, port_size))
+        pygame.draw.rect(screen, COLOR_PORT_CRACK, (x, y, port_size, port_size), 2)
+        
+        # Stress blotches (darker areas showing structural damage)
+        s = port_size
+        blotch_color = (50, 25, 20)
+        pygame.draw.rect(screen, blotch_color, (x + int(s*0.12), y + int(s*0.15), int(s*0.18), int(s*0.12)))
+        pygame.draw.rect(screen, blotch_color, (x + int(s*0.65), y + int(s*0.35), int(s*0.15), int(s*0.20)))
+        pygame.draw.rect(screen, blotch_color, (x + int(s*0.30), y + int(s*0.70), int(s*0.22), int(s*0.14)))
+        
+        # Distributed crack lines (proportional to port size)
+        crack_col = COLOR_PORT_CRACK
+        # Diagonal crack from upper-left toward center
+        pygame.draw.line(screen, crack_col, (x + int(s*0.08), y + int(s*0.15)), (x + int(s*0.45), y + int(s*0.52)), 1)
+        # Diagonal crack from upper-right toward left-center
+        pygame.draw.line(screen, crack_col, (x + int(s*0.85), y + int(s*0.10)), (x + int(s*0.38), y + int(s*0.48)), 1)
+        # Vertical crack on left side
+        pygame.draw.line(screen, crack_col, (x + int(s*0.18), y + int(s*0.25)), (x + int(s*0.22), y + int(s*0.65)), 1)
+        # Horizontal crack near middle
+        pygame.draw.line(screen, crack_col, (x + int(s*0.25), y + int(s*0.50)), (x + int(s*0.72), y + int(s*0.48)), 1)
+        # Diagonal from bottom-left toward right
+        pygame.draw.line(screen, crack_col, (x + int(s*0.15), y + int(s*0.78)), (x + int(s*0.68), y + int(s*0.62)), 1)
+        # Short crack near bottom-right
+        pygame.draw.line(screen, crack_col, (x + int(s*0.72), y + int(s*0.82)), (x + int(s*0.88), y + int(s*0.75)), 1)
+        # Cross pattern near center
+        pygame.draw.line(screen, crack_col, (x + int(s*0.42), y + int(s*0.38)), (x + int(s*0.58), y + int(s*0.55)), 1)
+        # Diagonal on right side
+        pygame.draw.line(screen, crack_col, (x + int(s*0.78), y + int(s*0.30)), (x + int(s*0.82), y + int(s*0.58)), 1)
+
+
 def dock_spawn_slots():
     """
     Precompute a grid of spawn slots inside dock_rect.
@@ -96,10 +195,14 @@ def reset():
     supply = make_supply_keys(required)
 
     return {
-        "state": STATE_DOCKING,
-        "boat_x": -300,
-        "boat_target_x": 300,
+        "state": STATE_GLIDE,
+        "boat_x": 250,  # Port A position
+        "boat_target_x": 400,  # Will set during docking
         "boat_y": 54,
+
+        "glide_start_x": 250,  # Port A
+        "glide_end_x": 450,    # Port B
+        "glide_duration": 2.5,  # seconds
 
         "player": pygame.Rect(120, 420, PLAYER_SIZE, PLAYER_SIZE),
         "carrying": None,
@@ -198,7 +301,25 @@ while True:
     # ----------------------------
     # STATE LOGIC
     # ----------------------------
-    if game["state"] == STATE_DOCKING:
+    if game["state"] == STATE_GLIDE:
+        # Establishing shot: boat glides from Port A to Port B over 2-3 seconds
+        elapsed = now - game["state_time"]
+        t = min(1.0, elapsed / game["glide_duration"])
+        
+        # Smooth interpolation from Port A to Port B
+        game["boat_x"] = game["glide_start_x"] + (game["glide_end_x"] - game["glide_start_x"]) * t
+        game["boat_y"] = 210  # Position over the water in glide scene
+        
+        # When glide is complete, transition to docking scene
+        if t >= 1.0:
+            game["state"] = STATE_DOCKING
+            game["state_time"] = now
+            # Reset boat for docking approach from left
+            game["boat_x"] = -300
+            game["boat_target_x"] = 300
+            game["boat_y"] = 54
+
+    elif game["state"] == STATE_DOCKING:
         t = (now - game["state_time"]) / DOCK_SECONDS
         if t >= 1.0:
             game["state"] = STATE_ALLOCATION
@@ -281,17 +402,57 @@ while True:
     # ----------------------------
     # DRAW
     # ----------------------------
-    screen.fill(COLOR_BG)
-    pygame.draw.rect(screen, COLOR_WATER, boat_zone)
-    pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
-    pygame.draw.rect(screen, COLOR_PANEL, panel_rect)
+    if game["state"] == STATE_GLIDE:
+        # Establishing shot: C-shaped cove with ports
+        draw_cove_background()
+        
+        # Port positioning calculations
+        # Horizontal centering within cove
+        cove_center_x = 450
+        total_port_width = PORT_SIZE * 2 + PORT_GAP
+        left_port_x = cove_center_x - total_port_width // 2
+        right_port_x = left_port_x + PORT_SIZE + PORT_GAP
+        
+        # Vertical embedding: southern beach arc
+        # Water ellipse southern edge: cove_center_y + water_height // 2
+        # Port top edge aligns to water boundary, bottom half in beach
+        cove_center_y = 260
+        water_height = 330
+        port_y = cove_center_y + water_height // 2 - PORT_SIZE
+        
+        # Port A (left, damaged) and Port B (right, intact)
+        draw_port(left_port_x, port_y, is_intact=False)
+        draw_port(right_port_x, port_y, is_intact=True)
+        
+        # Draw boat gliding over water (smaller than port)
+        boat_glide_y = game["boat_y"]
+        pygame.draw.rect(
+            screen,
+            (120, 70, 30),
+            (game["boat_x"], boat_glide_y, GLIDE_BOAT_WIDTH, GLIDE_BOAT_HEIGHT)
+        )
+        # Small circle for crew
+        crew_x = game["boat_x"] + int(GLIDE_BOAT_WIDTH * 0.7)
+        crew_y = boat_glide_y - int(GLIDE_BOAT_HEIGHT * 0.3)
+        pygame.draw.circle(screen, (255, 220, 180), (crew_x, crew_y), 3)
+        
+        # Title
+        title = FONT.render("Tiny Cove — Opening: Cove at Dawn", True, COLOR_TEXT)
+        screen.blit(title, (280, 12))
+        
+    else:
+        # Normal allocation scene background
+        screen.fill(COLOR_BG)
+        pygame.draw.rect(screen, COLOR_WATER, boat_zone)
+        pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
+        pygame.draw.rect(screen, COLOR_PANEL, panel_rect)
 
-    # Boat
-    draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
+        # Boat
+        draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
 
-    # HUD common
-    title = FONT.render("Tiny Cove — Port B (Allocation)", True, COLOR_TEXT)
-    screen.blit(title, (280, 12))
+        # HUD common
+        title = FONT.render("Tiny Cove — Port B (Allocation)", True, COLOR_TEXT)
+        screen.blit(title, (280, 12))
 
     # Allocation UI
     if game["state"] in (STATE_ALLOCATION, STATE_LASHING, STATE_DEPART, STATE_END):
