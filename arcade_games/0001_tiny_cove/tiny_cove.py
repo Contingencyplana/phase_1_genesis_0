@@ -11,13 +11,20 @@
 
 import pygame
 import sys
+import os
 import time
+
+# Add parent directory to path for shared modules
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from harbor_geometry import HULL_CLEARANCE, HARBOR_STRIP_HEIGHT, docked_boat_y
 
 from tiny_cove_core import *
 
 pygame.init()
 
-WIDTH, HEIGHT = 900, 600
+WIDTH, HEIGHT = 800, 600
 FPS = 60
 
 FONT = pygame.font.SysFont("arial", 18)
@@ -29,6 +36,7 @@ CARRY_SPEED_MULT = 0.7
 
 COUNTDOWN_SECONDS = 45
 DOCK_SECONDS = 1.6
+DOCK_PAUSE_SECONDS = 0.8
 LASH_SECONDS = 1.2
 
 AUTO_LASH_DELAY = 2.0  # seconds after requirements met -> auto depart (prevents soft-lock)
@@ -38,6 +46,9 @@ PORT_SIZE = 90
 PORT_GAP = PORT_SIZE // 3
 GLIDE_BOAT_WIDTH = int(PORT_SIZE * 0.9)
 GLIDE_BOAT_HEIGHT = int(PORT_SIZE * 0.5)
+
+BOAT_WIDTH = 240
+BOAT_HULL_HEIGHT = 30
 
 COLOR_BG = (26, 34, 52)
 COLOR_WATER = (55, 105, 150)
@@ -67,14 +78,14 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Tiny Cove")
 clock = pygame.time.Clock()
 
-boat_zone = pygame.Rect(0, 0, WIDTH, 95)
+boat_zone = pygame.Rect(0, 0, WIDTH, 80)
 dock_rect = pygame.Rect(80, 230, 320, 260)
 panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 
 
 def draw_boat(x, y, children, loaded):
     # Simple hull
-    pygame.draw.rect(screen, (120, 70, 30), (x, y, 280, 34))
+    pygame.draw.rect(screen, (120, 70, 30), (x, y, BOAT_WIDTH, BOAT_HULL_HEIGHT))
 
     # Children (fixed)
     for i in range(children):
@@ -197,7 +208,7 @@ def reset():
     return {
         "state": STATE_GLIDE,
         "boat_x": 0,  # Will be computed in STATE_GLIDE
-        "boat_target_x": 300,  # Will set during docking
+        "boat_target_x": 0,  # Computed during docking
         "boat_y": 54,
 
         "glide_duration": 2.5,  # seconds
@@ -318,26 +329,44 @@ while True:
         
         # Smooth interpolation from Port A to Port B
         game["boat_x"] = glide_start + (glide_end - glide_start) * t
-        game["boat_y"] = 210  # Position over the water in glide scene
+
+        cove_center_y = 260
+        water_height = 330
+        port_y = cove_center_y + water_height // 2 - PORT_SIZE
+
+        hull_height = int(GLIDE_BOAT_HEIGHT * 0.35)
+        hull_top_offset = int(GLIDE_BOAT_HEIGHT * 0.5)
+        hull_total_height = hull_top_offset + hull_height
+        vertical_gap = 6  # small visual clearance
+        boat_y = port_y - hull_total_height - vertical_gap
+
+        game["boat_y"] = boat_y
         
         # When glide is complete, transition to docking scene
         if t >= 1.0:
             game["state"] = STATE_DOCKING
             game["state_time"] = now
-            # Reset boat for docking approach from left
-            game["boat_x"] = -300
-            game["boat_target_x"] = 300
-            game["boat_y"] = 54
+            game["boat_target_x"] = 0
 
     elif game["state"] == STATE_DOCKING:
-        t = (now - game["state_time"]) / DOCK_SECONDS
-        if t >= 1.0:
+        elapsed = now - game["state_time"]
+        boat_width = BOAT_WIDTH
+        boat_target_x = WIDTH // 2 - boat_width // 2
+        boat_start_x = -boat_width - int(boat_width * 0.1)
+        hull_height = BOAT_HULL_HEIGHT
+        boat_y = docked_boat_y(boat_zone.bottom)
+
+        if elapsed < DOCK_SECONDS:
+            t = elapsed / DOCK_SECONDS
+            game["boat_x"] = boat_start_x + (boat_target_x - boat_start_x) * t
+            game["boat_y"] = boat_y
+        elif elapsed < DOCK_SECONDS + DOCK_PAUSE_SECONDS:
+            game["boat_x"] = boat_target_x
+            game["boat_y"] = boat_y
+        else:
             game["state"] = STATE_ALLOCATION
             game["countdown_start"] = now
             game["requirements_met_at"] = None
-        else:
-            # Boat sails in from left
-            game["boat_x"] = -300 + (game["boat_target_x"] + 300) * t
 
     elif game["state"] == STATE_ALLOCATION:
         # Timer (clamp at 0 to prevent negative display)
@@ -479,10 +508,21 @@ while True:
         title = FONT.render("Tiny Cove — Opening: Cove at Dawn", True, COLOR_TEXT)
         screen.blit(title, (280, 12))
         
+    elif game["state"] == STATE_DOCKING:
+        # Cinematic arrival: no panel or allocation HUD
+        screen.fill(COLOR_BG)
+        pygame.draw.rect(screen, COLOR_WATER, boat_zone)
+        # Draw dock lip at harbor strip bottom
+        pygame.draw.rect(screen, COLOR_DOCK, (0, boat_zone.bottom, WIDTH, 6))
+        pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
+        draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
+
     else:
         # Normal allocation scene background
         screen.fill(COLOR_BG)
         pygame.draw.rect(screen, COLOR_WATER, boat_zone)
+        # Draw dock lip at harbor strip bottom
+        pygame.draw.rect(screen, COLOR_DOCK, (0, boat_zone.bottom, WIDTH, 6))
         pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
         pygame.draw.rect(screen, COLOR_PANEL, panel_rect)
 

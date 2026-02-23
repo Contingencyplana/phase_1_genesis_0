@@ -3,6 +3,17 @@ import random
 import sys
 import os
 
+# Add parent directory to path for shared modules
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from harbor_geometry import (
+    WIDTH, HEIGHT,
+    HARBOR_STRIP_HEIGHT,
+    BOAT_HULL_WIDTH,
+    BOAT_HULL_HEIGHT,
+    centered_boat_x,
+    docked_boat_y
+)
+
 pygame.init()
 
 # Initialize mixer for audio
@@ -48,7 +59,6 @@ try:
 except Exception as e:
     print(f"Warning: Could not load audio files: {e}")
 
-WIDTH, HEIGHT = 800, 600
 FPS = 60
 
 PLAYER_SIZE = 25
@@ -67,7 +77,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Harbor Tremor Rescue")
 clock = pygame.time.Clock()
 
-boat_zone = pygame.Rect(0, 0, WIDTH, 80)
+boat_zone = pygame.Rect(0, 0, WIDTH, HARBOR_STRIP_HEIGHT)
 
 # Start background music
 music_path = get_audio_path("music_loop.ogg") or get_audio_path("music_loop.wav")
@@ -178,19 +188,17 @@ game = reset_game()
 
 def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_time=0):
 
-    boat_width = 240
-    boat_height = 30
-    boat_x = WIDTH // 2 - boat_width // 2 + boat_offset_x
-    boat_y = 30
+    boat_x = centered_boat_x(offset_x=boat_offset_x)
+    boat_y = docked_boat_y(HARBOR_STRIP_HEIGHT)
 
     pygame.draw.polygon(surface, (120, 70, 30), [
-        (boat_x + 20, boat_y + boat_height),
+        (boat_x + 20, boat_y + BOAT_HULL_HEIGHT),
         (boat_x, boat_y),
-        (boat_x + boat_width, boat_y),
-        (boat_x + boat_width - 30, boat_y + boat_height),
+        (boat_x + BOAT_HULL_WIDTH, boat_y),
+        (boat_x + BOAT_HULL_WIDTH - 30, boat_y + BOAT_HULL_HEIGHT),
     ])
 
-    mast_x = boat_x + boat_width // 2
+    mast_x = boat_x + BOAT_HULL_WIDTH // 2
 
     pygame.draw.line(surface, (200, 200, 200),
                      (mast_x, boat_y),
@@ -214,7 +222,7 @@ def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_tim
             ])
 
     spacing = 20
-    start_x = boat_x + boat_width - 30
+    start_x = boat_x + BOAT_HULL_WIDTH - 30
 
     for i, child in enumerate(rescued_children):
         cx = start_x - i * spacing
@@ -395,8 +403,7 @@ while True:
                 game["boat_offset_x"] = accel_distance + 150 * glide_time
 
         # Check if boat left edge is off-screen
-        boat_width = 240
-        boat_x = WIDTH // 2 - boat_width // 2 + game["boat_offset_x"]
+        boat_x = centered_boat_x(offset_x=game["boat_offset_x"])
         if boat_x > WIDTH:
             game["game_over"] = True
 
