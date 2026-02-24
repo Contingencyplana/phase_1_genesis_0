@@ -217,8 +217,8 @@ def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_tim
         cy = boat_y - 8
         draw_child_on_boat(surface, cx, cy, child.variant, child.gender)
 
-    # Draw captain if victorious
-    if victory:
+    # Draw captain if victorious (with slight delay after departure begins)
+    if victory and departure_time >= 0.15:
         draw_captain_on_boat(surface, boat_x, boat_y)
 
 
@@ -382,6 +382,8 @@ while True:
     # Draw harbor strip
 
     pygame.draw.rect(screen, (80, 120, 160), boat_zone)
+    # Dock lip separator (matches Tiny Cove)
+    pygame.draw.rect(screen, (85, 60, 40), (0, boat_zone.bottom, WIDTH, 6))
 
     hud = FONT.render(
         f"Rescued: {len(game['rescued_children'])}/{RESCUE_TARGET}   Health: {game['health']}",
@@ -396,7 +398,8 @@ while True:
 
     draw_boat(screen, game["rescued_children"], game["victory"], game["boat_offset_x"], departure_time)
 
-    draw_captain(screen, game["player"])
+    if not game["departure_active"]:
+        draw_captain(screen, game["player"])
 
     if not game["carrying"] and game["child"] is not None and not game["departure_active"]:
         game["child"].draw(screen)
