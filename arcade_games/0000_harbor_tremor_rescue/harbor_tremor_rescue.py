@@ -13,6 +13,13 @@ from harbor_geometry import (
     centered_boat_x,
     docked_boat_y
 )
+from harbor_art import (
+    draw_boat_hull,
+    draw_boat_mast,
+    draw_boat_sails,
+    draw_child_on_boat,
+    draw_captain_on_boat
+)
 
 pygame.init()
 
@@ -191,63 +198,28 @@ def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_tim
     boat_x = centered_boat_x(offset_x=boat_offset_x)
     boat_y = docked_boat_y(HARBOR_STRIP_HEIGHT)
 
-    pygame.draw.polygon(surface, (120, 70, 30), [
-        (boat_x + 20, boat_y + BOAT_HULL_HEIGHT),
-        (boat_x, boat_y),
-        (boat_x + BOAT_HULL_WIDTH, boat_y),
-        (boat_x + BOAT_HULL_WIDTH - 30, boat_y + BOAT_HULL_HEIGHT),
-    ])
+    # Draw hull using shared art module
+    draw_boat_hull(surface, boat_x, boat_y, BOAT_HULL_WIDTH, BOAT_HULL_HEIGHT)
+    
+    # Draw mast using shared art module
+    draw_boat_mast(surface, boat_x, boat_y, BOAT_HULL_WIDTH)
 
-    mast_x = boat_x + BOAT_HULL_WIDTH // 2
-
-    pygame.draw.line(surface, (200, 200, 200),
-                     (mast_x, boat_y),
-                     (mast_x, 0), 3)
-
+    # Draw sails if departing
     if victory:
-        if departure_time >= 0.0:
-            pygame.draw.polygon(surface, (255, 255, 255), [
-                (mast_x, 0),
-                (mast_x + 70, 0),
-                (mast_x + 80, boat_y - 5),
-                (mast_x, boat_y - 5)
-            ])
+        draw_boat_sails(surface, boat_x, boat_y, BOAT_HULL_WIDTH, departure_time)
 
-        if departure_time >= 0.2:
-            pygame.draw.polygon(surface, (255, 255, 255), [
-                (mast_x - 70, 0),
-                (mast_x, 0),
-                (mast_x, boat_y - 5),
-                (mast_x - 80, boat_y - 5)
-            ])
-
+    # Draw children on board using shared art module
     spacing = 20
     start_x = boat_x + BOAT_HULL_WIDTH - 30
 
     for i, child in enumerate(rescued_children):
         cx = start_x - i * spacing
         cy = boat_y - 8
-        pygame.draw.circle(surface, (255, 220, 180), (cx, cy), 5)
-        # Eyes
-        pygame.draw.circle(surface, (0, 0, 0), (cx - 2, cy), 1)
-        pygame.draw.circle(surface, (0, 0, 0), (cx + 2, cy), 1)
-        hair_color = child.hair_colors[child.variant]
-        if child.gender == "boy":
-            pygame.draw.rect(surface, hair_color, (cx - 5, cy - 6, 10, 4))
-        else:
-            pygame.draw.line(surface, hair_color, (cx - 4, cy - 6), (cx - 4, cy + 1), 2)
-            pygame.draw.line(surface, hair_color, (cx + 4, cy - 6), (cx + 4, cy + 1), 2)
+        draw_child_on_boat(surface, cx, cy, child.variant, child.gender)
 
+    # Draw captain if victorious
     if victory:
-        cap_x = boat_x + 15
-        cap_y = boat_y - 16
-        pygame.draw.circle(surface, (255, 220, 180), (cap_x, cap_y), 6)
-        # Eyes (looking slightly right)
-        pygame.draw.circle(surface, (0, 0, 0), (cap_x - 1, cap_y), 1)
-        pygame.draw.circle(surface, (0, 0, 0), (cap_x + 3, cap_y), 1)
-        pygame.draw.line(surface, (50, 150, 255),
-                         (cap_x, cap_y + 4),
-                         (cap_x, cap_y + 15), 3)
+        draw_captain_on_boat(surface, boat_x, boat_y)
 
 
 def draw_captain(surface, rect):

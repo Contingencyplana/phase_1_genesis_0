@@ -19,6 +19,7 @@ import time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from harbor_geometry import HULL_CLEARANCE, HARBOR_STRIP_HEIGHT, docked_boat_y
+from harbor_art import draw_docked_boat_with_children
 
 from tiny_cove_core import *
 
@@ -82,18 +83,22 @@ boat_zone = pygame.Rect(0, 0, WIDTH, 80)
 dock_rect = pygame.Rect(80, 230, 320, 260)
 panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 
+# HUD positioning anchor: below harbor strip to avoid boat mast/sails
+HUD_TOP_Y = boat_zone.bottom + 12
+
 
 def draw_boat(x, y, children, loaded):
-    # Simple hull
-    pygame.draw.rect(screen, (120, 70, 30), (x, y, BOAT_WIDTH, BOAT_HULL_HEIGHT))
-
-    # Children (fixed)
-    for i in range(children):
-        pygame.draw.circle(screen, (255, 220, 180), (x + 250 - i * 18, y - 6), 6)
-
-    # Cargo stack (simple)
+    # Draw boat with children and captain using shared harbor art
+    draw_docked_boat_with_children(
+        screen, x, y, children,
+        show_captain=True,
+        boat_width=BOAT_WIDTH,
+        boat_height=BOAT_HULL_HEIGHT
+    )
+    
+    # Cargo stack (simple visual indicator below children)
     for i, _key in enumerate(loaded):
-        pygame.draw.rect(screen, (195, 170, 110), (x + 20 + i * 22, y - 6, 18, 12))
+        pygame.draw.rect(screen, (195, 170, 110), (x + 20 + i * 22, y + BOAT_HULL_HEIGHT + 2, 18, 12))
 
 
 def draw_cove_background():
@@ -146,9 +151,8 @@ def draw_port(x, y, is_intact):
     port_size = PORT_SIZE
     
     if is_intact:
-        # Port B: intact, neutral dock color
+        # Port B: intact, neutral dock color (no border)
         pygame.draw.rect(screen, COLOR_PORT_INTACT, (x, y, port_size, port_size))
-        pygame.draw.rect(screen, (80, 60, 40), (x, y, port_size, port_size), 2)
     else:
         # Port A: damaged, dark with red undertone
         pygame.draw.rect(screen, COLOR_PORT_DAMAGED, (x, y, port_size, port_size))
@@ -529,9 +533,9 @@ while True:
         # Boat
         draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
 
-        # HUD common
+        # HUD common - title below harbor strip
         title = FONT.render("Tiny Cove — Port B (Allocation)", True, COLOR_TEXT)
-        screen.blit(title, (280, 12))
+        screen.blit(title, (280, HUD_TOP_Y))
 
     # Allocation UI
     if game["state"] in (STATE_ALLOCATION, STATE_LASHING, STATE_DEPART, STATE_END):
@@ -581,11 +585,11 @@ while True:
         if game["state"] == STATE_ALLOCATION:
             pygame.draw.rect(screen, (200, 200, 200), game["player"])
 
-            # Carry status (fixed HUD)
+            # Carry status (fixed HUD) - positioned below harbor strip
             carry_text = f"Carrying: {game['carrying']}" if game["carrying"] else "Carrying: (nothing)"
-            screen.blit(FONT.render(carry_text, True, COLOR_TEXT), (280, 42))
+            screen.blit(FONT.render(carry_text, True, COLOR_TEXT), (280, HUD_TOP_Y + 24))
 
-            # Depart prompt
+            # Depart prompt - positioned below carry status
             if has_required_loaded(game["loaded"], game["required"]):
                 # Show whether it's auto-lashing soon
                 if game["requirements_met_at"] is not None:
@@ -593,9 +597,9 @@ while True:
                 else:
                     auto_in = AUTO_LASH_DELAY
                 screen.blit(FONT.render(f"Requirements met! Auto-depart in {auto_in:0.1f}s (or press SPACE).",
-                                        True, COLOR_CHECK), (280, 66))
+                                        True, COLOR_CHECK), (280, HUD_TOP_Y + 48))
             else:
-                screen.blit(FONT.render("Load all REQUIRED items to depart.", True, COLOR_DIM), (280, 66))
+                screen.blit(FONT.render("Load all REQUIRED items to depart.", True, COLOR_DIM), (280, HUD_TOP_Y + 48))
 
     # Docking / lashing / depart feedback
     if game["state"] == STATE_DOCKING:
