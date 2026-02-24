@@ -231,8 +231,8 @@ def dock_spawn_slots():
     Ensures we never spawn outside the dock.
     """
     slots = []
-    left = dock_rect.x + dock_rect.width - 186  # Position on right side of dock_rect
-    top = dock_rect.y + 44
+    left = dock_rect.x + dock_rect.width - 124  # Position on right side of dock_rect
+    top = dock_rect.y + 52
     cell_w = 60
     cell_h = 60
     cols = 2
