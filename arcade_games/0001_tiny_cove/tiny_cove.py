@@ -10,9 +10,11 @@
 # - Disable toggling checkboxes for already-loaded items
 
 import pygame
+import pygame.mixer
 import sys
 import os
 import time
+import subprocess
 
 # Add parent directory to path for shared modules
 
@@ -24,9 +26,47 @@ from harbor_art import draw_docked_boat_with_children
 from tiny_cove_core import *
 
 pygame.init()
+pygame.mixer.init()
 
 WIDTH, HEIGHT = 800, 600
 FPS = 60
+
+# Generate pickup sound if it doesn't exist
+AUDIO_DIR = os.path.join(os.path.dirname(__file__), "assets", "audio")
+PICKUP_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_spell_pickup.wav")
+LOAD_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_load_soft.wav")
+
+if not os.path.exists(PICKUP_SOUND_PATH):
+    os.makedirs(AUDIO_DIR, exist_ok=True)
+    script_path = os.path.join(os.path.dirname(__file__), "create_pickup_sound.py")
+    try:
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass  # Continue anyway if sound generation fails
+
+if not os.path.exists(LOAD_SOUND_PATH):
+    os.makedirs(AUDIO_DIR, exist_ok=True)
+    script_path = os.path.join(os.path.dirname(__file__), "create_load_sound.py")
+    try:
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass  # Continue anyway if sound generation fails
+
+# Load pickup sound effect
+sfx_pickup = None
+if os.path.exists(PICKUP_SOUND_PATH):
+    try:
+        sfx_pickup = pygame.mixer.Sound(PICKUP_SOUND_PATH)
+    except pygame.error:
+        pass  # Continue if sound fails to load
+
+# Load load sound effect
+sfx_load = None
+if os.path.exists(LOAD_SOUND_PATH):
+    try:
+        sfx_load = pygame.mixer.Sound(LOAD_SOUND_PATH)
+    except pygame.error:
+        pass  # Continue if sound fails to load
 
 FONT = pygame.font.SysFont("arial", 18)
 BIG_FONT = pygame.font.SysFont("arial", 36)
@@ -37,7 +77,7 @@ CARRY_SPEED_MULT = 0.7
 
 COUNTDOWN_SECONDS = 45
 DOCK_SECONDS = 1.6
-DOCK_PAUSE_SECONDS = 0.8
+DOCK_PAUSE_SECONDS = 0.1
 LASH_SECONDS = 1.2
 
 AUTO_LASH_DELAY = 2.0  # seconds after requirements met -> auto depart (prevents soft-lock)
@@ -195,8 +235,8 @@ def dock_spawn_slots():
     top = dock_rect.y + 80
     cell_w = 52
     cell_h = 48
-    cols = max(1, (dock_rect.w - 40) // cell_w)
-    rows = max(1, (dock_rect.h - 120) // cell_h)
+    cols = 3
+    rows = 2
     for r in range(rows):
         for c in range(cols):
             x = left + c * cell_w
@@ -303,7 +343,7 @@ while True:
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if game["state"] == STATE_ALLOCATION:
                 mx, my = event.pos
-                y = 200
+                y = 226
                 for key in game["clipboard"]:
                     box = pygame.Rect(20, y, 18, 18)
                     if box.collidepoint(mx, my) and not is_checkbox_disabled(key):
@@ -413,6 +453,9 @@ while True:
                 if game["player"].colliderect(rect):
                     game["carrying"] = key
                     del game["dock_items"][key]
+                    # Play pickup sound
+                    if sfx_pickup:
+                        sfx_pickup.play()
                     break
 
         # Deliver to boat zone
@@ -421,6 +464,9 @@ while True:
             if remaining_capacity(game["loaded"]) - cargo_weight(key) >= 0:
                 game["loaded"].append(key)
                 game["carrying"] = None
+                # Play load sound on successful delivery
+                if sfx_load:
+                    sfx_load.play()
                 # Keep checkbox checked but effectively disabled now
                 game["clipboard"][key] = True
             else:
