@@ -293,7 +293,12 @@ def spawn_from_clipboard():
             del game["dock_items"][key]
 
     # Determine which keys need to spawn
-    want = [k for k, checked in game["clipboard"].items() if checked and k not in game["loaded"]]
+    want = [
+        k for k, checked in game["clipboard"].items()
+        if checked
+        and k not in game["loaded"]
+        and k != game["carrying"]
+    ]
     have = set(game["dock_items"].keys())
 
     # Fill empty slots with missing keys
