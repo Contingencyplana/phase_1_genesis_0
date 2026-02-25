@@ -282,37 +282,15 @@ SLOTS = dock_spawn_slots()
 
 def spawn_from_clipboard():
     """
-    Ensure every checked (and not loaded) item exists on the dock,
-    and unchecked items are removed from dock.
-
-    Uses fixed grid slots so items never overflow dock bounds.
+    Spawn new items onto the dock based on clipboard checks.
+    
+    The dock is an independent staging surface that retains items
+    until they are picked up or delivered.
     """
-    # Remove dock items that were unchecked
-    for key in list(game["dock_items"].keys()):
-        if not game["clipboard"].get(key, False):
-            del game["dock_items"][key]
-
-    # Determine which keys need to spawn
-    want = [
-        k for k, checked in game["clipboard"].items()
-        if checked
-        and k not in game["loaded"]
-        and k != game["carrying"]
-    ]
-    have = set(game["dock_items"].keys())
-
-    # Fill empty slots with missing keys
-    empty_slots = [s for s in SLOTS if all(not s.colliderect(r) for r in game["dock_items"].values())]
-
-    for key in want:
-        if key in have:
-            continue
-        if not empty_slots:
-            # No space left — refuse to spawn more
-            game["clipboard"][key] = False
-            continue
-        slot = empty_slots.pop(0)
-        game["dock_items"][key] = pygame.Rect(slot.x, slot.y, slot.w, slot.h)
+    for index, (key, checked) in enumerate(game["clipboard"].items()):
+        if checked and key not in game["dock_items"] and key not in game["loaded"] and key != game["carrying"]:
+            slot = SLOTS[index]
+            game["dock_items"][key] = pygame.Rect(slot.x, slot.y, slot.w, slot.h)
 
 
 def is_checkbox_disabled(key: str) -> bool:
@@ -458,6 +436,7 @@ while True:
                 if game["player"].colliderect(rect):
                     game["carrying"] = key
                     del game["dock_items"][key]
+                    game["clipboard"][key] = False
                     # Play pickup sound
                     if sfx_pickup:
                         sfx_pickup.play()
