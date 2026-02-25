@@ -480,9 +480,6 @@ while True:
                 game["clipboard"][key] = True
                 spawn_from_clipboard()
 
-        # Keep dock synced to clipboard
-        spawn_from_clipboard()
-
     elif game["state"] == STATE_LASHING:
         if now - game["state_time"] >= LASH_SECONDS:
             game["state"] = STATE_DEPART
