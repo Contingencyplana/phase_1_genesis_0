@@ -124,7 +124,7 @@ dock_rect = pygame.Rect(80, 230, 320, 260)
 panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 
 # HUD positioning anchor: below harbor strip to avoid boat mast/sails
-HUD_TOP_Y = boat_zone.bottom + 12
+HUD_TOP_Y = boat_zone.bottom + 22
 
 
 def draw_boat(x, y, children, loaded, skip_cargo=False):
