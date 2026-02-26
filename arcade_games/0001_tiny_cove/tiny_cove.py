@@ -298,6 +298,11 @@ def is_checkbox_disabled(key: str) -> bool:
     return key in game["loaded"]
 
 
+def ready_to_depart():
+    ticked_count = sum(1 for v in game["clipboard"].values() if v)
+    return has_required_loaded(game["loaded"], game["required"]) and len(game["loaded"]) == ticked_count
+
+
 while True:
     dt = clock.tick(FPS) / 1000.0
     now = time.time()
@@ -316,7 +321,7 @@ while True:
                 sys.exit()
 
             if game["state"] == STATE_ALLOCATION and event.key == pygame.K_SPACE:
-                if has_required_loaded(game["loaded"], game["required"]):
+                if ready_to_depart():
                     game["state"] = STATE_LASHING
                     game["state_time"] = now
 
@@ -401,7 +406,7 @@ while True:
         remaining = max(0.0, COUNTDOWN_SECONDS - elapsed)
 
         # If requirements met, start/maintain a met timestamp for auto-lash
-        if has_required_loaded(game["loaded"], game["required"]):
+        if ready_to_depart():
             if game["requirements_met_at"] is None:
                 game["requirements_met_at"] = now
 
@@ -617,7 +622,7 @@ while True:
             screen.blit(FONT.render(carry_text, True, COLOR_TEXT), (280, HUD_TOP_Y + 24))
 
             # Depart prompt - positioned below carry status
-            if has_required_loaded(game["loaded"], game["required"]):
+            if ready_to_depart():
                 # Show whether it's auto-lashing soon
                 if game["requirements_met_at"] is not None:
                     auto_in = max(0.0, AUTO_LASH_DELAY - (now - game["requirements_met_at"]))
@@ -626,7 +631,7 @@ while True:
                 screen.blit(FONT.render(f"Requirements met! Auto-depart in {auto_in:0.1f}s (or press SPACE).",
                                         True, COLOR_CHECK), (280, HUD_TOP_Y + 48))
             else:
-                screen.blit(FONT.render("Load all REQUIRED items to depart.", True, COLOR_DIM), (280, HUD_TOP_Y + 48))
+                screen.blit(FONT.render("Load all required items and every checked supply to depart.", True, COLOR_DIM), (280, HUD_TOP_Y + 48))
 
     # Docking / lashing / depart feedback
     if game["state"] == STATE_DOCKING:

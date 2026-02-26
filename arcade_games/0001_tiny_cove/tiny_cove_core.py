@@ -5,7 +5,7 @@ import random
 
 CHILDREN_COUNT = 8
 CHILD_WEIGHT = 1
-MAX_WEIGHT = 12
+MAX_WEIGHT = 14
 
 CARGO_CATALOG = [
     {"key": "Food", "weight": 1},
