@@ -441,7 +441,6 @@ while True:
                 if game["player"].colliderect(rect):
                     game["carrying"] = key
                     del game["dock_items"][key]
-                    game["clipboard"][key] = False
                     # Play pickup sound
                     if sfx_pickup:
                         sfx_pickup.play()
