@@ -127,6 +127,32 @@ panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 HUD_TOP_Y = boat_zone.bottom + 22
 
 
+def draw_captain(surface, rect):
+    """Draw a tiny toy soldier captain sprite centered on the rect."""
+    cx = rect.centerx
+    cy = rect.centery
+    
+    # Legs (thick blue vertical lines)
+    pygame.draw.line(surface, (50, 150, 255), (cx - 3, cy + 3), (cx - 3, cy + 10), 4)
+    pygame.draw.line(surface, (50, 150, 255), (cx + 3, cy + 3), (cx + 3, cy + 10), 4)
+    
+    # Torso (solid rectangular block)
+    pygame.draw.rect(surface, (50, 150, 255), (cx - 6, cy - 5, 12, 10))
+    
+    # Arms (thick horizontal lines)
+    pygame.draw.line(surface, (50, 150, 255), (cx - 8, cy), (cx + 8, cy), 4)
+    
+    # Head (larger skin-colored circle)
+    pygame.draw.circle(surface, (255, 220, 180), (cx, cy - 10), 7)
+    
+    # Eyes (looking slightly right)
+    pygame.draw.circle(surface, (0, 0, 0), (cx - 2, cy - 10), 1)
+    pygame.draw.circle(surface, (0, 0, 0), (cx + 3, cy - 10), 1)
+    
+    # Helmet/hat (wider blue-gray rectangle)
+    pygame.draw.rect(surface, (80, 100, 150), (cx - 7, cy - 18, 14, 5))
+
+
 def draw_boat(x, y, children, loaded, skip_cargo=False):
     # Draw boat with children and captain using shared harbor art
     draw_docked_boat_with_children(
@@ -580,6 +606,8 @@ while True:
                         overlay_surf.set_alpha(shimmer_alpha)
                         overlay_surf.fill((255, 255, 255))
                         screen.blit(overlay_surf, (rect.x, rect.y))
+        elif game["state"] == STATE_DEPART:
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=True)
         else:
             draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
 
@@ -633,7 +661,7 @@ while True:
 
         # Player
         if game["state"] == STATE_ALLOCATION:
-            pygame.draw.rect(screen, (200, 200, 200), game["player"])
+            draw_captain(screen, game["player"])
 
             # Carry status (fixed HUD) - positioned below harbor strip
             carry_text = f"Carrying: {game['carrying']}" if game["carrying"] else "Carrying: (nothing)"
