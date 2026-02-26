@@ -127,7 +127,7 @@ panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 HUD_TOP_Y = boat_zone.bottom + 12
 
 
-def draw_boat(x, y, children, loaded):
+def draw_boat(x, y, children, loaded, skip_cargo=False):
     # Draw boat with children and captain using shared harbor art
     draw_docked_boat_with_children(
         screen, x, y, children,
@@ -137,8 +137,9 @@ def draw_boat(x, y, children, loaded):
     )
     
     # Cargo stack (simple visual indicator below children)
-    for i, _key in enumerate(loaded):
-        pygame.draw.rect(screen, (195, 170, 110), (x + 20 + i * 22, y + BOAT_HULL_HEIGHT + 2, 18, 12))
+    if not skip_cargo:
+        for i, _key in enumerate(loaded):
+            pygame.draw.rect(screen, (195, 170, 110), (x + 20 + i * 22, y + BOAT_HULL_HEIGHT + 2, 18, 12))
 
 
 def draw_cove_background():
@@ -561,8 +562,26 @@ while True:
         pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
         pygame.draw.rect(screen, COLOR_PANEL, panel_rect)
 
-        # Boat
-        draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
+        # Boat - special handling for STATE_LASHING cargo rendering
+        if game["state"] == STATE_LASHING:
+            elapsed_lash = now - game["state_time"]
+            skip_cargo = elapsed_lash >= 0.2
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=skip_cargo)
+            
+            # Shimmer effect on loaded crates during first 0.2 seconds
+            if elapsed_lash < 0.2 and game["loaded"]:
+                pulse_progress = elapsed_lash / 0.2
+                shimmer_alpha = int(255 * (1 - pulse_progress))
+                
+                if shimmer_alpha > 0:
+                    for i in range(len(game["loaded"])):
+                        rect = pygame.Rect(game["boat_x"] + 20 + i * 22, game["boat_y"] + BOAT_HULL_HEIGHT + 2, 18, 12)
+                        overlay_surf = pygame.Surface((rect.w, rect.h))
+                        overlay_surf.set_alpha(shimmer_alpha)
+                        overlay_surf.fill((255, 255, 255))
+                        screen.blit(overlay_surf, (rect.x, rect.y))
+        else:
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
 
         # HUD common - title below harbor strip
         title = FONT.render("Tiny Cove — Port B (Allocation)", True, COLOR_TEXT)
