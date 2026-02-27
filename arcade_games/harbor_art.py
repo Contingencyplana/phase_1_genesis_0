@@ -22,7 +22,8 @@ def draw_captain(surface, rect, mode="full"):
     if mode == "boat":
         old_clip = surface.get_clip()
         # Clip to hide legs, show only head, helmet, arms, and upper torso
-        clip_rect = pygame.Rect(rect.x - 5, rect.y, rect.width + 10, 18)
+        # Shift clip window down 6 pixels to correct vertical anchor
+        clip_rect = pygame.Rect(rect.x - 5, rect.y + 6, rect.width + 10, 18)
         surface.set_clip(clip_rect)
     
     # Draw complete captain geometry (visible portions depend on clip in boat mode)
