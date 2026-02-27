@@ -6,6 +6,51 @@ Implements consistent visual style across harbor-themed games
 import pygame
 
 
+def draw_captain(surface, rect, mode="full"):
+    """Draw a captain sprite - complete for cursor, clipped for boat display.
+    
+    Args:
+        surface: pygame surface to draw on
+        rect: pygame.Rect for positioning (rect center defines captain center)
+        mode: "full" for complete captain, "boat" for above-rails clipped display
+    """
+    cx = rect.centerx
+    cy = rect.centery
+    
+    # Save clip state if in boat mode
+    old_clip = None
+    if mode == "boat":
+        old_clip = surface.get_clip()
+        # Clip to hide legs, show only head, helmet, arms, and upper torso
+        clip_rect = pygame.Rect(rect.x - 5, rect.y, rect.width + 10, 18)
+        surface.set_clip(clip_rect)
+    
+    # Draw complete captain geometry (visible portions depend on clip in boat mode)
+    # Legs (thick blue vertical lines)
+    pygame.draw.line(surface, (50, 150, 255), (cx - 3, cy + 3), (cx - 3, cy + 10), 4)
+    pygame.draw.line(surface, (50, 150, 255), (cx + 3, cy + 3), (cx + 3, cy + 10), 4)
+    
+    # Torso (solid rectangular block)
+    pygame.draw.rect(surface, (50, 150, 255), (cx - 6, cy - 5, 12, 10))
+    
+    # Arms (thick horizontal lines)
+    pygame.draw.line(surface, (50, 150, 255), (cx - 8, cy), (cx + 8, cy), 4)
+    
+    # Head (larger skin-colored circle)
+    pygame.draw.circle(surface, (255, 220, 180), (cx, cy - 10), 7)
+    
+    # Eyes (looking slightly right)
+    pygame.draw.circle(surface, (0, 0, 0), (cx - 2, cy - 10), 1)
+    pygame.draw.circle(surface, (0, 0, 0), (cx + 3, cy - 10), 1)
+    
+    # Helmet/hat (wider blue-gray rectangle)
+    pygame.draw.rect(surface, (80, 100, 150), (cx - 7, cy - 18, 14, 5))
+    
+    # Restore clip if in boat mode
+    if mode == "boat":
+        surface.set_clip(old_clip)
+
+
 def draw_boat_hull(surface, boat_x, boat_y, boat_width=240, boat_height=30):
     """
     Draw the boat hull polygon.
@@ -108,30 +153,6 @@ def draw_child_on_boat(surface, x, y, variant=0, gender="boy"):
         pygame.draw.line(surface, hair_color, (x + 4, y - 6), (x + 4, y + 1), 2)
 
 
-def draw_captain_on_boat(surface, boat_x, boat_y):
-    """
-    Draw the captain standing on the boat (simple head + torso).
-    
-    Args:
-        surface: pygame surface to draw on
-        boat_x: left edge X coordinate of boat
-        boat_y: top edge Y coordinate of boat
-    """
-    cap_x = boat_x + 15
-    cap_y = boat_y - 16
-    
-    # Head (skin tone)
-    pygame.draw.circle(surface, (255, 220, 180), (cap_x, cap_y), 6)
-    
-    # Eyes (looking slightly right)
-    pygame.draw.circle(surface, (0, 0, 0), (cap_x - 1, cap_y), 1)
-    pygame.draw.circle(surface, (0, 0, 0), (cap_x + 3, cap_y), 1)
-    
-    # Torso (blue uniform - simple line)
-    pygame.draw.line(surface, (50, 150, 255),
-                     (cap_x, cap_y + 4),
-                     (cap_x, cap_y + 15), 3)
-
 
 def draw_docked_boat_with_children(surface, boat_x, boat_y, children_count, 
                                     show_captain=True, boat_width=240, boat_height=30):
@@ -167,4 +188,8 @@ def draw_docked_boat_with_children(surface, boat_x, boat_y, children_count,
     
     # Draw captain
     if show_captain:
-        draw_captain_on_boat(surface, boat_x, boat_y)
+        # Create rect centered at boat captain position
+        cap_x = boat_x + 15
+        cap_y = boat_y - 16
+        captain_rect = pygame.Rect(cap_x - 13, cap_y - 13, 26, 26)
+        draw_captain(surface, captain_rect, mode="boat")

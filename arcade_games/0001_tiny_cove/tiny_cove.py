@@ -21,7 +21,7 @@ import subprocess
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from harbor_geometry import HULL_CLEARANCE, HARBOR_STRIP_HEIGHT, docked_boat_y
-from harbor_art import draw_docked_boat_with_children
+from harbor_art import draw_docked_boat_with_children, draw_captain
 
 from tiny_cove_core import *
 
@@ -125,32 +125,6 @@ panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 
 # HUD positioning anchor: below harbor strip to avoid boat mast/sails
 HUD_TOP_Y = boat_zone.bottom + 22
-
-
-def draw_captain(surface, rect):
-    """Draw a tiny toy soldier captain sprite centered on the rect."""
-    cx = rect.centerx
-    cy = rect.centery
-    
-    # Legs (thick blue vertical lines)
-    pygame.draw.line(surface, (50, 150, 255), (cx - 3, cy + 3), (cx - 3, cy + 10), 4)
-    pygame.draw.line(surface, (50, 150, 255), (cx + 3, cy + 3), (cx + 3, cy + 10), 4)
-    
-    # Torso (solid rectangular block)
-    pygame.draw.rect(surface, (50, 150, 255), (cx - 6, cy - 5, 12, 10))
-    
-    # Arms (thick horizontal lines)
-    pygame.draw.line(surface, (50, 150, 255), (cx - 8, cy), (cx + 8, cy), 4)
-    
-    # Head (larger skin-colored circle)
-    pygame.draw.circle(surface, (255, 220, 180), (cx, cy - 10), 7)
-    
-    # Eyes (looking slightly right)
-    pygame.draw.circle(surface, (0, 0, 0), (cx - 2, cy - 10), 1)
-    pygame.draw.circle(surface, (0, 0, 0), (cx + 3, cy - 10), 1)
-    
-    # Helmet/hat (wider blue-gray rectangle)
-    pygame.draw.rect(surface, (80, 100, 150), (cx - 7, cy - 18, 14, 5))
 
 
 def draw_boat(x, y, children, loaded, skip_cargo=False):

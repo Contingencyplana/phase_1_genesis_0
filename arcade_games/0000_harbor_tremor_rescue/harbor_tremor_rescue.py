@@ -18,7 +18,7 @@ from harbor_art import (
     draw_boat_mast,
     draw_boat_sails,
     draw_child_on_boat,
-    draw_captain_on_boat
+    draw_captain
 )
 
 pygame.init()
@@ -219,33 +219,10 @@ def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_tim
 
     # Draw captain if victorious (with slight delay after departure begins)
     if victory and departure_time >= 0.15:
-        draw_captain_on_boat(surface, boat_x, boat_y)
-
-
-def draw_captain(surface, rect):
-    """Draw a tiny toy soldier captain sprite centered on the rect."""
-    cx = rect.centerx
-    cy = rect.centery
-    
-    # Legs (thick blue vertical lines)
-    pygame.draw.line(surface, (50, 150, 255), (cx - 3, cy + 3), (cx - 3, cy + 10), 4)
-    pygame.draw.line(surface, (50, 150, 255), (cx + 3, cy + 3), (cx + 3, cy + 10), 4)
-    
-    # Torso (solid rectangular block)
-    pygame.draw.rect(surface, (50, 150, 255), (cx - 6, cy - 5, 12, 10))
-    
-    # Arms (thick horizontal lines)
-    pygame.draw.line(surface, (50, 150, 255), (cx - 8, cy), (cx + 8, cy), 4)
-    
-    # Head (larger skin-colored circle)
-    pygame.draw.circle(surface, (255, 220, 180), (cx, cy - 10), 7)
-    
-    # Eyes (looking slightly right)
-    pygame.draw.circle(surface, (0, 0, 0), (cx - 2, cy - 10), 1)
-    pygame.draw.circle(surface, (0, 0, 0), (cx + 3, cy - 10), 1)
-    
-    # Helmet/hat (wider blue-gray rectangle)
-    pygame.draw.rect(surface, (80, 100, 150), (cx - 7, cy - 18, 14, 5))
+        cap_x = boat_x + 15
+        cap_y = boat_y - 16
+        captain_rect = pygame.Rect(cap_x - 13, cap_y - 13, 26, 26)
+        draw_captain(surface, captain_rect, mode="boat")
 
 
 # -------------------------------------------------
