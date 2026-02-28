@@ -47,6 +47,7 @@ SFX_HIT = None
 SFX_SAIL = None
 SFX_DEPART = None
 SFX_DEFEAT = None
+SFX_VICTORY = None
 
 try:
     if get_audio_path("sfx_pickup.wav"):
@@ -63,6 +64,8 @@ try:
         SFX_DEPART = pygame.mixer.Sound(get_audio_path("sfx_depart.wav"))
     if get_audio_path("sfx_defeat.wav"):
         SFX_DEFEAT = pygame.mixer.Sound(get_audio_path("sfx_defeat.wav"))
+    if get_audio_path("sfx_victory.wav"):
+        SFX_VICTORY = pygame.mixer.Sound(get_audio_path("sfx_victory.wav"))
 except Exception as e:
     print(f"Warning: Could not load audio files: {e}")
 
@@ -183,6 +186,7 @@ def reset_game():
         "last_drop_played": False,
         "played_depart_sound": False,
         "played_defeat_sound": False,
+        "played_victory_sound": False,
     }
 
 
@@ -312,6 +316,10 @@ while True:
 
         if len(game["rescued_children"]) >= RESCUE_TARGET and not game["departure_active"]:
             game["victory"] = True
+            if not game["played_victory_sound"]:
+                if SFX_VICTORY:
+                    SFX_VICTORY.play()
+                game["played_victory_sound"] = True
             game["departure_active"] = True
             if SFX_SAIL:
                 SFX_SAIL.play()

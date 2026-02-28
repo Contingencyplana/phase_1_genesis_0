@@ -35,5 +35,6 @@ create_wav('sfx_hit.wav', freq=300, duration=0.2)
 create_wav('sfx_sail.wav', freq=900, duration=0.3)
 create_wav('sfx_depart.wav', freq=700, duration=0.25)
 create_wav('sfx_defeat.wav', freq=200, duration=0.5)
+create_wav('sfx_victory.wav', freq=750, duration=0.35)
 
 print('All audio files created successfully in ' + audio_dir)
