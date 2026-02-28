@@ -8,6 +8,7 @@ Gentle fade-out with low volume
 
 import numpy as np
 import wave
+import os
 
 # Audio parameters
 sample_rate = 44100  # Hz
@@ -33,7 +34,9 @@ waveform = waveform * volume
 waveform_int16 = np.int16(waveform * 32767)
 
 # Write to WAV file
-output_path = "assets/audio/sfx_spell_pickup.wav"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+output_path = os.path.join(BASE_DIR, "assets", "audio", "sfx_spell_pickup.wav")
+os.makedirs(os.path.dirname(output_path), exist_ok=True)
 with wave.open(output_path, 'wb') as wav_file:
     wav_file.setnchannels(1)  # Mono
     wav_file.setsampwidth(2)  # 16-bit

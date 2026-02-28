@@ -194,6 +194,6 @@ def draw_docked_boat_with_children(surface, boat_x, boat_y, children_count,
     if show_captain:
         # Create rect centered at boat captain position
         cap_x = boat_x + 15
-        cap_y = boat_y - 16
+        cap_y = boat_y - 12
         captain_rect = pygame.Rect(cap_x - 13, cap_y - 13, 26, 26)
         draw_captain(surface, captain_rect, mode="boat")

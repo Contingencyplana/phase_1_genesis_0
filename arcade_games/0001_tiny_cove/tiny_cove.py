@@ -28,6 +28,9 @@ from tiny_cove_core import *
 pygame.init()
 pygame.mixer.init()
 
+print("Mixer init:", pygame.mixer.get_init())
+print("Mixer channels:", pygame.mixer.get_num_channels())
+
 WIDTH, HEIGHT = 800, 600
 FPS = 60
 
@@ -35,6 +38,8 @@ FPS = 60
 AUDIO_DIR = os.path.join(os.path.dirname(__file__), "assets", "audio")
 PICKUP_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_spell_pickup.wav")
 LOAD_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_load_soft.wav")
+VICTORY_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_victory.wav")
+FAILURE_SOUND_PATH = os.path.join(AUDIO_DIR, "sfx_failure.wav")
 
 if not os.path.exists(PICKUP_SOUND_PATH):
     os.makedirs(AUDIO_DIR, exist_ok=True)
@@ -52,6 +57,22 @@ if not os.path.exists(LOAD_SOUND_PATH):
     except (subprocess.CalledProcessError, FileNotFoundError):
         pass  # Continue anyway if sound generation fails
 
+if not os.path.exists(VICTORY_SOUND_PATH):
+    os.makedirs(AUDIO_DIR, exist_ok=True)
+    script_path = os.path.join(os.path.dirname(__file__), "create_victory_sound.py")
+    try:
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass  # Continue anyway if sound generation fails
+
+if not os.path.exists(FAILURE_SOUND_PATH):
+    os.makedirs(AUDIO_DIR, exist_ok=True)
+    script_path = os.path.join(os.path.dirname(__file__), "create_failure_sound.py")
+    try:
+        subprocess.run([sys.executable, script_path], check=True, capture_output=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        pass  # Continue anyway if sound generation fails
+
 # Load pickup sound effect
 sfx_pickup = None
 if os.path.exists(PICKUP_SOUND_PATH):
@@ -60,6 +81,10 @@ if os.path.exists(PICKUP_SOUND_PATH):
     except pygame.error:
         pass  # Continue if sound fails to load
 
+print("Pickup sound loaded:", sfx_pickup is not None)
+if sfx_pickup:
+    sfx_pickup.set_volume(1.0)
+
 # Load load sound effect
 sfx_load = None
 if os.path.exists(LOAD_SOUND_PATH):
@@ -67,6 +92,32 @@ if os.path.exists(LOAD_SOUND_PATH):
         sfx_load = pygame.mixer.Sound(LOAD_SOUND_PATH)
     except pygame.error:
         pass  # Continue if sound fails to load
+
+print("Load sound loaded:", sfx_load is not None)
+if sfx_load:
+    sfx_load.set_volume(1.0)
+
+# Load victory sound effect
+sfx_victory = None
+if os.path.exists(VICTORY_SOUND_PATH):
+    try:
+        sfx_victory = pygame.mixer.Sound(VICTORY_SOUND_PATH)
+    except pygame.error:
+        pass  # Continue if sound fails to load
+
+if sfx_victory:
+    sfx_victory.set_volume(0.20)
+
+# Load failure sound effect
+sfx_failure = None
+if os.path.exists(FAILURE_SOUND_PATH):
+    try:
+        sfx_failure = pygame.mixer.Sound(FAILURE_SOUND_PATH)
+    except pygame.error:
+        pass  # Continue if sound fails to load
+
+if sfx_failure:
+    sfx_failure.set_volume(0.15)
 
 FONT = pygame.font.SysFont("arial", 18)
 BIG_FONT = pygame.font.SysFont("arial", 36)
@@ -127,11 +178,11 @@ panel_rect = pygame.Rect(0, 0, 260, HEIGHT)
 HUD_TOP_Y = boat_zone.bottom + 22
 
 
-def draw_boat(x, y, children, loaded, skip_cargo=False):
+def draw_boat(x, y, children, loaded, skip_cargo=False, show_captain=True):
     # Draw boat with children and captain using shared harbor art
     draw_docked_boat_with_children(
         screen, x, y, children,
-        show_captain=True,
+        show_captain=show_captain,
         boat_width=BOAT_WIDTH,
         boat_height=BOAT_HULL_HEIGHT
     )
@@ -274,6 +325,8 @@ def reset():
 
         "won": False,
         "failed": False,
+        "victory_sound_played": False,
+        "failure_sound_played": False,
     }
 
 
@@ -420,6 +473,9 @@ while True:
             if remaining <= 0.0:
                 game["failed"] = True
                 game["state"] = STATE_END
+                if not game["failure_sound_played"] and sfx_failure:
+                    sfx_failure.play()
+                    game["failure_sound_played"] = True
 
         # Movement
         keys = pygame.key.get_pressed()
@@ -473,6 +529,9 @@ while True:
         if game["boat_x"] > WIDTH + 50:
             game["won"] = True
             game["state"] = STATE_END
+            if not game["victory_sound_played"] and sfx_victory:
+                sfx_victory.play()
+                game["victory_sound_played"] = True
 
     # ----------------------------
     # DRAW
@@ -551,7 +610,7 @@ while True:
         # Draw dock lip at harbor strip bottom
         pygame.draw.rect(screen, COLOR_DOCK, (0, boat_zone.bottom, WIDTH, 6))
         pygame.draw.rect(screen, COLOR_DOCK, dock_rect)
-        draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
+        draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], show_captain=(game["state"] != STATE_ALLOCATION))
 
     else:
         # Normal allocation scene background
@@ -566,7 +625,7 @@ while True:
         if game["state"] == STATE_LASHING:
             elapsed_lash = now - game["state_time"]
             skip_cargo = elapsed_lash >= 0.2
-            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=skip_cargo)
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=skip_cargo, show_captain=(game["state"] != STATE_ALLOCATION))
             
             # Shimmer effect on loaded crates during first 0.2 seconds
             if elapsed_lash < 0.2 and game["loaded"]:
@@ -581,9 +640,9 @@ while True:
                         overlay_surf.fill((255, 255, 255))
                         screen.blit(overlay_surf, (rect.x, rect.y))
         elif game["state"] == STATE_DEPART:
-            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=True)
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], skip_cargo=True, show_captain=(game["state"] != STATE_ALLOCATION))
         else:
-            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"])
+            draw_boat(game["boat_x"], game["boat_y"], CHILDREN_COUNT, game["loaded"], show_captain=(game["state"] != STATE_ALLOCATION))
 
         # HUD common - title below harbor strip
         title = FONT.render("Tiny Cove — Port B (Allocation)", True, COLOR_TEXT)

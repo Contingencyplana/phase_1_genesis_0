@@ -220,7 +220,7 @@ def draw_boat(surface, rescued_children, victory, boat_offset_x=0, departure_tim
     # Draw captain if victorious (with slight delay after departure begins)
     if victory and departure_time >= 0.15:
         cap_x = boat_x + 15
-        cap_y = boat_y - 16
+        cap_y = boat_y - 12
         captain_rect = pygame.Rect(cap_x - 13, cap_y - 13, 26, 26)
         draw_captain(surface, captain_rect, mode="boat")
 
