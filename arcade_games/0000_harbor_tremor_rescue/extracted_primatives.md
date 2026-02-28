@@ -93,7 +93,9 @@ Short SFX triggered at state boundaries:
 - hit
 - sail raise
 - departure
+- victory
 - defeat
+Victory and defeat both produce terminal cues.
 
 Traits:
 - No looping background layer
