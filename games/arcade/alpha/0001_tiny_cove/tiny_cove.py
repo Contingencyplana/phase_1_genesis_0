@@ -20,8 +20,8 @@ import subprocess
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from harbor_geometry import HULL_CLEARANCE, HARBOR_STRIP_HEIGHT, docked_boat_y
-from harbor_art import draw_docked_boat_with_children, draw_captain
+from shared.harbor_geometry import HULL_CLEARANCE, HARBOR_STRIP_HEIGHT, docked_boat_y
+from shared.harbor_art import draw_docked_boat_with_children, draw_captain
 
 from tiny_cove_core import *
 

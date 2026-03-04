@@ -5,7 +5,7 @@ import os
 
 # Add parent directory to path for shared modules
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from harbor_geometry import (
+from shared.harbor_geometry import (
     WIDTH, HEIGHT,
     HARBOR_STRIP_HEIGHT,
     BOAT_HULL_WIDTH,
@@ -13,7 +13,7 @@ from harbor_geometry import (
     centered_boat_x,
     docked_boat_y
 )
-from harbor_art import (
+from shared.harbor_art import (
     draw_boat_hull,
     draw_boat_mast,
     draw_boat_sails,
