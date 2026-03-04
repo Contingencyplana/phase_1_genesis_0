@@ -4,11 +4,11 @@ import random
 import pygame
 
 # ============================================================
-# 0003 — FLAGSHIP (Junk Arcade Skeleton)
+# 0004 — DRILLSHIP FLEET (Junk Arcade Skeleton)
 #
 # Real-time continuous combat probe.
-# Player commands multiple allied ships by:
-#   1) Clicking an allied ship to select it
+# Player commands multiple friendly ships by:
+#   1) Clicking an allied ship or flagship to select it
 #   2) Clicking an enemy ship to assign target
 #
 # Core test:
@@ -28,6 +28,9 @@ import pygame
 #   - Move directly toward flagship
 #   - Attack when in range
 #
+# Flagship:
+#   - Stationary heavy turret
+#   - Selectable and target-assignable like allies
 # Allies:
 #   - Default FOLLOW flagship unless assigned a target
 #   - If target destroyed -> return to FOLLOW
@@ -38,7 +41,7 @@ import pygame
 #   Flagship health reaches 0
 #
 # Controls:
-#   Mouse: click ally to select; click enemy to assign target
+#   Mouse: click ally/flagship to select; click enemy to assign target
 #   R: restart
 #   ESC: quit
 # ============================================================
@@ -48,7 +51,7 @@ pygame.init()
 WIDTH, HEIGHT = 1100, 720
 FPS = 60
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("0003 — Flagship (Junk Arcade)")
+pygame.display.set_caption("0004 — Drillship Fleet (Junk Arcade)")
 clock = pygame.time.Clock()
 
 FONT = pygame.font.SysFont("consolas", 20)
@@ -171,25 +174,26 @@ class AllyShip(Ship):
         self.speed = 120.0
         self.fire_range = 170.0
         self.fire_cd = random.choice([0.9, 1.0, 1.1])
-        self.dmg = 7.0
+        self.dmg = 8.0
 
         self.state = "FOLLOW"   # FOLLOW or TARGET
-        self.target_id = None   # index into enemies list
+        self.target = None   # object reference to target enemy
 
 class EnemyShip(Ship):
     def __init__(self, x, y):
         super().__init__(x, y, radius=14, color=COL_ENEMY, max_hp=30)
-        self.speed = 85.0
-        self.fire_range = 140.0
+        self.speed = 58.0
+        self.fire_range = 115.0
         self.fire_cd = random.choice([1.0, 1.1, 1.2])
-        self.dmg = 6.0
+        self.dmg = 4.5
 
 # ------------------------------------------------------------
 # Spawning
 # ------------------------------------------------------------
 
-def spawn_enemy_at_edge():
-    side = random.choice(["top", "bottom", "left", "right"])
+def spawn_enemy_at_edge(side=None):
+    if side is None:
+        side = random.choice(["top", "bottom", "left", "right"])
     pad = 20
     if side == "top":
         return random.randint(pad, WIDTH - pad), pad
@@ -201,7 +205,13 @@ def spawn_enemy_at_edge():
 
 def spawn_wave(num_enemies):
     enemies = []
-    for _ in range(num_enemies):
+    # Distribute first enemies across edges to prevent clustering
+    sides = ["top", "bottom", "left", "right"]
+    for i in range(min(num_enemies, 4)):
+        x, y = spawn_enemy_at_edge(side=sides[i])
+        enemies.append(EnemyShip(x, y))
+    # Remaining enemies spawn randomly
+    for _ in range(num_enemies - min(num_enemies, 4)):
         x, y = spawn_enemy_at_edge()
         enemies.append(EnemyShip(x, y))
     return enemies
@@ -211,11 +221,14 @@ def spawn_wave(num_enemies):
 # ------------------------------------------------------------
 
 def new_game():
-    flagship = Ship(WIDTH // 2, HEIGHT // 2 + 80, radius=18, color=COL_FLAGSHIP, max_hp=120)
-    flagship.speed = 80.0
-    flagship.fire_range = 0.0
-    flagship.fire_cd = 999.0
-    flagship.dmg = 0.0
+    flagship = Ship(WIDTH // 2, HEIGHT // 2 + 80, radius=18, color=COL_FLAGSHIP, max_hp=200)
+    flagship.speed = 0.0
+    flagship.fire_range = 160.0
+    flagship.fire_cd = 1.4
+    flagship.fire_timer = random.uniform(0.0, flagship.fire_cd)
+    flagship.dmg = 10.0
+    flagship.state = "FOLLOW"  # FOLLOW or TARGET
+    flagship.target = None
 
     allies = [
         AllyShip(flagship.x - 80, flagship.y - 40),
@@ -229,7 +242,7 @@ def new_game():
         "flagship": flagship,
         "allies": allies,
         "enemies": enemies,
-        "selected_ally": None,  # index of selected ally
+        "selected_unit": None,  # ("flagship", None) or ("ally", idx)
         "message": "Click an ALLY to select, then click an ENEMY to assign target.",
         "message_t": 3.0,
         "ended": False,
@@ -268,25 +281,46 @@ def update_allies(dt):
 
         # Validate target reference
         if ally.state == "TARGET":
-            if ally.target_id is None or ally.target_id >= len(enemies):
+            if ally.target is None or not ally.target.alive() or ally.target not in enemies:
                 ally.state = "FOLLOW"
-                ally.target_id = None
-            else:
-                if not enemies[ally.target_id].alive():
-                    ally.state = "FOLLOW"
-                    ally.target_id = None
+                ally.target = None
 
         if ally.state == "FOLLOW":
-            # Simple trailing orbit behavior: move toward a point near flagship
+            # Base target: trailing orbit behavior around flagship
             # (slight offset based on ally identity for spread)
-            # Use deterministic offsets based on object id for stability.
             seed = (id(ally) % 3) - 1
             tx = flagship.x + seed * 55
             ty = flagship.y - 70 - (seed * 15)
+            
+            # Separation from nearby allies (avoid stacking)
+            sep_x, sep_y = 0.0, 0.0
+            separation_radius = 35.0
+            separation_count = 0
+            
+            for other in state["allies"]:
+                if other is ally:
+                    continue
+                d = dist(ally.pos(), other.pos())
+                if d < separation_radius and d > 0:
+                    # Accumulate push-away vector
+                    dx = ally.x - other.x
+                    dy = ally.y - other.y
+                    ux, uy = norm(dx, dy)
+                    sep_x += ux
+                    sep_y += uy
+                    separation_count += 1
+            
+            # Apply separation offset to target
+            if separation_count > 0:
+                sep_x, sep_y = norm(sep_x, sep_y)
+                # Push target 15px in separation direction
+                tx += sep_x * 15
+                ty += sep_y * 15
+            
             ally.move_toward(tx, ty, dt)
 
         elif ally.state == "TARGET":
-            target = enemies[ally.target_id]
+            target = ally.target
             # Move toward target until within comfortable fire range
             d = dist(ally.pos(), target.pos())
             if d > ally.fire_range * 0.85:
@@ -296,6 +330,23 @@ def update_allies(dt):
             if d <= ally.fire_range and ally.can_fire():
                 target.take_damage(ally.dmg)
                 ally.reset_fire()
+
+def update_flagship(dt):
+    flagship = state["flagship"]
+    enemies = state["enemies"]
+
+    flagship.update_fire_timer(dt)
+
+    if flagship.state == "TARGET":
+        if flagship.target is None or not flagship.target.alive() or flagship.target not in enemies:
+            flagship.state = "FOLLOW"
+            flagship.target = None
+        else:
+            target = flagship.target
+            d = dist(flagship.pos(), target.pos())
+            if d <= flagship.fire_range and flagship.can_fire():
+                target.take_damage(flagship.dmg)
+                flagship.reset_fire()
 
 def update_enemies(dt):
     flagship = state["flagship"]
@@ -329,28 +380,38 @@ def handle_click(mx, my):
     if state["ended"]:
         return
 
+    flagship = state["flagship"]
+
+    # Check flagship for selection
+    if dist((mx, my), flagship.pos()) <= flagship.r + 4:
+        state["selected_unit"] = ("flagship", None)
+        set_message("Flagship selected. Now click an enemy to assign target.", 1.6)
+        return
+
     # First: check allies for selection
     for idx, ally in enumerate(state["allies"]):
         if dist((mx, my), ally.pos()) <= ally.r + 4:
-            state["selected_ally"] = idx
+            state["selected_unit"] = ("ally", idx)
             set_message("Ally selected. Now click an enemy to assign target.", 1.6)
             return
 
-    # If we have selected ally, check enemies for targeting
-    if state["selected_ally"] is not None:
-        for eidx, enemy in enumerate(state["enemies"]):
+    # If we have selected a friendly unit, check enemies for targeting
+    if state["selected_unit"] is not None:
+        unit_kind, unit_idx = state["selected_unit"]
+        selected_ship = state["flagship"] if unit_kind == "flagship" else state["allies"][unit_idx]
+
+        for enemy in state["enemies"]:
             if dist((mx, my), enemy.pos()) <= enemy.r + 4:
-                ally = state["allies"][state["selected_ally"]]
-                ally.state = "TARGET"
-                ally.target_id = eidx
+                selected_ship.state = "TARGET"
+                selected_ship.target = enemy
                 set_message("Target assigned.", 1.1)
                 # keep selection (attention test) OR clear selection
                 # For clarity, clear selection after assignment:
-                state["selected_ally"] = None
+                state["selected_unit"] = None
                 return
 
     # Clicking empty space clears selection
-    state["selected_ally"] = None
+    state["selected_unit"] = None
 
 # ------------------------------------------------------------
 # Main Loop
@@ -380,6 +441,7 @@ while running:
             handle_click(*event.pos)
 
     if not state["ended"]:
+        update_flagship(dt)
         update_allies(dt)
         update_enemies(dt)
         purge_dead_enemies()
@@ -391,20 +453,24 @@ while running:
     screen.fill(COL_BG)
 
     # Title / HUD
-    draw_text("0003 — FLAGSHIP", 30, 12, BIG)
-    draw_text("Click ALLY → click ENEMY (selective targeting). Real-time continuous.", 30, 46, FONT, COL_MUTED)
+    draw_text("0004 — DRILLSHIP FLEET", 30, 12, BIG)
+    draw_text("Click ALLY/FLAGSHIP → click ENEMY (selective targeting). Real-time continuous.", 30, 46, FONT, COL_MUTED)
 
     # Entities
     flagship = state["flagship"]
-    flagship.draw(selected=False)
+    flagship_selected = state["selected_unit"] is not None and state["selected_unit"][0] == "flagship"
+    flagship.draw(selected=flagship_selected)
+
+    if flagship.state == "TARGET" and flagship.target is not None and flagship.target in state["enemies"]:
+        pygame.draw.line(screen, (120, 210, 255), (int(flagship.x), int(flagship.y)), (int(flagship.target.x), int(flagship.target.y)), 2)
 
     for idx, ally in enumerate(state["allies"]):
-        ally.draw(selected=(state["selected_ally"] == idx))
+        ally_selected = state["selected_unit"] == ("ally", idx)
+        ally.draw(selected=ally_selected)
 
         # Draw thin line to target if assigned
-        if ally.state == "TARGET" and ally.target_id is not None and ally.target_id < len(state["enemies"]):
-            tgt = state["enemies"][ally.target_id]
-            pygame.draw.line(screen, (120, 255, 140), (int(ally.x), int(ally.y)), (int(tgt.x), int(tgt.y)), 2)
+        if ally.state == "TARGET" and ally.target is not None and ally.target in state["enemies"]:
+            pygame.draw.line(screen, (120, 255, 140), (int(ally.x), int(ally.y)), (int(ally.target.x), int(ally.target.y)), 2)
 
     for enemy in state["enemies"]:
         enemy.draw(selected=False)
