@@ -4,7 +4,7 @@ import random
 import pygame
 
 # ============================================================
-# 0003 — FLAGSHIP (Junk Arcade Skeleton)
+# 0003 — INNERSPACE FLEET (Junk Arcade Skeleton)
 #
 # Real-time continuous combat probe.
 # Player commands multiple allied ships by:
