@@ -2,13 +2,49 @@
 
 This document describes the long-term evolutionary path of the Kaleidoscope ecosystem.
 
-Kaleidoscope begins as a simple collaborative storytelling space and gradually evolves into a game creation platform, a creative ecosystem, and eventually a safe environment for advanced artificial intelligence research.
+Kaleidoscope begins as a collaborative storytelling environment and gradually evolves into a game creation platform, a creative ecosystem, and eventually a safe environment for advanced artificial intelligence research and experimentation.
 
-The stages below describe this progression.
+The progression occurs through a series of stages grouped into several major layers of development.
 
 ---
 
-# Stage 1 — Interactive Fiction
+# Overview Ladder
+
+The full conceptual ladder of the Kaleidoscope ecosystem is shown below.
+
+```text
+Interactive Fiction
+        ↓
+Grand Saga
+        ↓
+AI Safety Layer
+        ↓
+Adventures in Gamengineering
+        ↓
+Game World (Game Maker)
+        ↓
+Creative Ecosystem
+        ↓
+Cybertoys
+        ↓
+Play as a Primary Mode of Participation
+        ↓
+Employ Everyone
+        ↓
+Cyberimagination
+        ↓
+SHAGI
+```
+
+Each stage builds upon the previous one, gradually expanding the scale of the system.
+
+---
+
+# Layer 1 — Narrative Foundations
+
+This layer establishes the narrative world that attracts readers and contributors.
+
+## Stage 1 — Interactive Fiction
 
 The seed stage.
 
@@ -27,7 +63,7 @@ Create **narrative gravity** — a world people want to explore and contribute t
 
 ---
 
-# Stage 2 — Grand Saga
+## Stage 2 — Grand Saga
 
 As the story grows, the narrative becomes persistent.
 
@@ -47,7 +83,11 @@ Transform a collection of stories into a **living saga**.
 
 ---
 
-# Stage 3 — AI Safety Layer
+# Layer 2 — Safety and Governance
+
+Once the narrative world exists, it can become a laboratory for exploring safe intelligence and cooperative systems.
+
+## Stage 3 — AI Safety Layer
 
 The growing world becomes a laboratory for exploring ideas related to safe intelligence.
 
@@ -65,7 +105,11 @@ Develop a **culture of safe intelligence** before powerful AI systems appear.
 
 ---
 
-# Stage 4 — Adventures in Gamengineering
+# Layer 3 — Gamengineering Platform
+
+This layer transforms Kaleidoscope into a platform for building games and interactive systems.
+
+## Stage 4 — Adventures in Gamengineering
 
 Participants begin experimenting with game mechanics.
 
@@ -85,7 +129,7 @@ Develop **gamengineering literacy** and create many small experimental games.
 
 ---
 
-# Stage 5 — Game World (Game Maker)
+## Stage 5 — Game World (Game Maker)
 
 Kaleidoscope matures into a full game creation environment.
 
@@ -104,7 +148,7 @@ Transform Kaleidoscope into a **game maker and world builder**.
 
 ---
 
-# Stage 6 — Creative Ecosystem
+## Stage 6 — Creative Ecosystem
 
 As the game worlds expand, a larger ecosystem forms.
 
@@ -124,35 +168,121 @@ Enable a **large collaborative creative ecosystem**.
 
 ---
 
-# Stage 7 — SHAGI
+# Layer 4 — Civilization-Scale Evolution
 
-The final stage explores the development of:
+At this stage the ecosystem begins influencing AI participation, economics, and culture.
 
-Supersafe Hyperadvanced Artificial General Intelligence (SHAGI).
+## Stage 7 — Cybertoys
 
-By this stage the ecosystem already contains:
+Playful AI systems begin to appear within the ecosystem.
 
-- shared culture
-- governance structures
-- safety philosophy
-- vast testing environments
+These may include:
+
+- sandboxed AI agents
+- programmable AI players
+- interactive cyber-characters
+- collaborative AI tools
 
 Goal:
 
-Develop advanced intelligence systems **within a safe, cooperative environment**.
+Develop safe and cooperative **AI participants** within the ecosystem.
+
+---
+
+## Stage 8 — Play as a Primary Mode of Participation
+
+The ecosystem begins to demonstrate that learning, contribution, and collaboration can occur through play.
+
+Participants engage through:
+
+- exploration
+- creativity
+- experimentation
+- storytelling
+- game creation
+
+Goal:
+
+Explore the possibility that meaningful activity may occur through **play rather than traditional work structures**.
+
+---
+
+## Stage 9 — Employ Everyone
+
+The ecosystem expands to enable meaningful participation from very large numbers of people.
+
+Contributions may include:
+
+- storytelling
+- worldbuilding
+- experimentation
+- game design
+- collaborative systems development
+
+Goal:
+
+Create an ecosystem where **everyone can contribute meaningfully**.
+
+---
+
+## Stage 10 — Cyberimagination
+
+The ecosystem becomes a large collaborative environment for imagination and mythmaking.
+
+Activities may include:
+
+- shared storytelling worlds
+- collaborative myth creation
+- grand narrative adventures
+- large-scale creative exploration
+
+Goal:
+
+Enable **civilization-scale collaborative imagination**.
+
+---
+
+## Stage 11 — SHAGI
+
+The final stage explores the development of:
+
+**Supersafe Hyperadvanced Artificial General Intelligence (SHAGI).**
+
+By this stage the ecosystem already contains:
+
+- cooperative culture
+- governance systems
+- safety philosophy
+- large experimental environments
+- human-AI collaboration frameworks
+
+Goal:
+
+Develop advanced intelligence systems **within a safe and cooperative ecosystem**.
 
 ---
 
 # Summary
 
-The Kaleidoscope ecosystem evolves through the following stages:
+The Kaleidoscope ecosystem evolves through eleven stages grouped into four major layers.
 
+Narrative Foundations  
 1. Interactive Fiction  
 2. Grand Saga  
+
+Safety and Governance  
 3. AI Safety Layer  
+
+Gamengineering Platform  
 4. Adventures in Gamengineering  
 5. Game World (Game Maker)  
 6. Creative Ecosystem  
-7. SHAGI  
 
-Each stage builds upon the previous one, gradually increasing complexity while preserving safety and collaboration.
+Civilization-Scale Evolution  
+7. Cybertoys  
+8. Play as Participation  
+9. Employ Everyone  
+10. Cyberimagination  
+11. SHAGI  
+
+Each stage builds upon the previous one, gradually expanding the scope of the ecosystem while preserving safety, collaboration, and creativity.
