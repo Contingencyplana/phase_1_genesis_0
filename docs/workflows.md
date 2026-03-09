@@ -132,13 +132,13 @@ This cycle supports the long-term evolution of the platform.
 
 The Kaleidoscope ecosystem operates through two workflows:
 
-Initial Workflow
+## Initial Workflow
 
 Kaleidoscope builds Alpha TestBed and Alpha Dreaming.
 
 Alpha Dreaming publishes initial games to Alpha TestBed.
 
-Mature Workflow
+## Mature Workflow
 
 Developers create games in Kaleidoscope.
 
