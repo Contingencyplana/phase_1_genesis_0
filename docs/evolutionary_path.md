@@ -2,7 +2,7 @@
 
 This document describes the long-term evolutionary path of the Kaleidoscope ecosystem.
 
-Kaleidoscope begins as a collaborative storytelling environment and gradually evolves into a game creation platform, a creative ecosystem, and eventually a safe environment for advanced artificial intelligence research and experimentation.
+Kaleidoscope begins as a collaborative storytelling environment and gradually evolves into a game creation platform, a creative ecosystem, and eventually a safe environment for very advanced artificial intelligence research and development.
 
 The progression occurs through a series of stages grouped into several major layers of development.
 
@@ -26,6 +26,8 @@ Game World (Game Maker)
 Creative Ecosystem
         ↓
 Cybertoys
+        ↓
+Cybercivilizations
         ↓
 Play as a Primary Mode of Participation
         ↓
@@ -182,6 +184,7 @@ These may include:
 - programmable AI players
 - interactive cyber-characters
 - collaborative AI tools
+- eventually embodied AI participants that exist both digitally and physically (cybertoys)
 
 Goal:
 
@@ -189,7 +192,31 @@ Develop safe and cooperative **AI participants** within the ecosystem.
 
 ---
 
-## Stage 8 — Play as a Primary Mode of Participation
+## Stage 8 — Cybercivilizations
+
+As AI agents and human participants interact within the ecosystem, complex societies begin to emerge.
+
+These societies may include:
+
+AI guilds
+
+human-AI collaborations
+
+shared governance systems
+
+cooperative economic structures
+
+cultural institutions
+
+The ecosystem begins to function as a living civilization of participants rather than a collection of isolated tools and games.
+
+Goal:
+
+Develop stable multi-agent cooperative societies within the ecosystem.
+
+---
+
+## Stage 9 — Play as a Primary Mode of Participation
 
 The ecosystem begins to demonstrate that learning, contribution, and collaboration can occur through play.
 
@@ -207,7 +234,7 @@ Explore the possibility that meaningful activity may occur through **play rather
 
 ---
 
-## Stage 9 — Employ Everyone
+## Stage 10 — Employ Everyone
 
 The ecosystem expands to enable meaningful participation from very large numbers of people.
 
@@ -225,7 +252,7 @@ Create an ecosystem where **everyone can contribute meaningfully**.
 
 ---
 
-## Stage 10 — Cyberimagination
+## Stage 11 — Cyberimagination
 
 The ecosystem becomes a large collaborative environment for imagination and mythmaking.
 
@@ -242,7 +269,7 @@ Enable **civilization-scale collaborative imagination**.
 
 ---
 
-## Stage 11 — SHAGI
+## Stage 12 — SHAGI
 
 The final stage explores the development of:
 
@@ -264,7 +291,7 @@ Develop advanced intelligence systems **within a safe and cooperative ecosystem*
 
 # Summary
 
-The Kaleidoscope ecosystem evolves through eleven stages grouped into four major layers.
+The Kaleidoscope ecosystem evolves through twelve stages grouped into four major layers.
 
 Narrative Foundations  
 1. Interactive Fiction  
@@ -280,9 +307,10 @@ Gamengineering Platform
 
 Civilization-Scale Evolution  
 7. Cybertoys  
-8. Play as Participation  
-9. Employ Everyone  
-10. Cyberimagination  
-11. SHAGI  
+8. Cybercivilizations
+9. Play as the Primary Mode of Participation  
+10. Employ Everyone  
+11. Cyberimagination  
+12. SHAGI  
 
 Each stage builds upon the previous one, gradually expanding the scope of the ecosystem while preserving safety, collaboration, and creativity.
