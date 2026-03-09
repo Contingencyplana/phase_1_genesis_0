@@ -283,6 +283,12 @@ By this stage the ecosystem already contains:
 - large experimental environments
 - human-AI collaboration frameworks
 
+The Kaleidoscope universe may also have expanded to include many different kinds of worlds, such as:
+
+- archipelago worlds (water worlds containing vast oceans filled with countless islands)
+- eggshell worlds
+- gateway worlds
+
 Goal:
 
 Develop advanced intelligence systems **within a safe and cooperative ecosystem**.
