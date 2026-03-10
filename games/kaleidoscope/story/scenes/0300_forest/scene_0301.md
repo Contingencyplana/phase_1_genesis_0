@@ -44,9 +44,11 @@ The forest around you stands silent.
 
 Waiting.
 
+You take one last look at the strange marking in the stone before stepping back toward the forest trail.
+
 ---
 
 ## Choices
 
 - Continue deeper along the forest trail → scene_0303
-- Return to the forest entrance → scene_0004
+- Return to the forest entrance → scene_9001
