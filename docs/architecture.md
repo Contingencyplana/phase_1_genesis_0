@@ -102,7 +102,9 @@ Games created with Kaleidoscope
 
 ---
 
-## Bootstrapping Phase (Initial Workflow)
+## Initial and Mature Workflows
+
+### Initial Workflow (Bootstrapping Phase) 
 
 During the early phase of the project, Kaleidoscope is used to construct the initial infrastructure.
 
@@ -128,7 +130,7 @@ The first games appearing in Alpha TestBed may include:
 
 ---
 
-## Mature Workflow
+### Mature Workflow
 
 Once the ecosystem is established, the normal development loop emerges.
 

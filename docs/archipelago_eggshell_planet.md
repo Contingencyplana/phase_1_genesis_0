@@ -10,7 +10,7 @@ The purpose of this document is to describe the **largest known structure of the
 
 ---
 
-# The World Ocean
+## The World Ocean
 
 Most travelers understand the world primarily through the **World Ocean**.
 
@@ -26,7 +26,7 @@ Sailors often say that every horizon suggests another archipelago waiting to be 
 
 ---
 
-# Archipelagos
+### Archipelagos
 
 Islands throughout the World Ocean often appear in groups known as **archipelagos**.
 
@@ -42,7 +42,7 @@ Travelers sometimes refer to distant archipelagos as if they were **worlds of th
 
 ---
 
-# Island Chains
+### Island Chains
 
 Within many archipelagos, islands may form smaller regional groupings known as **island chains**.
 
@@ -59,7 +59,7 @@ Beyond those chains, however, the wider ocean remains vast and uncertain.
 
 ---
 
-# Islands
+### Islands
 
 Individual islands form the smallest geographic unit commonly recognized by travelers.
 
@@ -72,7 +72,7 @@ Every island may hold its own stories, discoveries, and mysteries.
 
 ---
 
-# Harbor Island
+### Harbor Island
 
 The Kaleidoscope story begins on **Harbor Island**, one island among many within the World Ocean.
 
@@ -84,7 +84,9 @@ Many of the earliest discoveries in the story begin here.
 
 ---
 
-# Rumors of an Eggshell World
+## Deeper Mysteries of the World
+
+### Rumors of an Eggshell World
 
 Among scholars and sailors there are persistent rumors about the true nature of the world.
 
@@ -100,7 +102,7 @@ For now, the World Ocean remains the only world most travelers will ever see.
 
 ---
 
-# Expansion of the World
+### Expansion of the World
 
 The Kaleidoscope world is designed to expand gradually.
 
@@ -117,7 +119,7 @@ The true scale of the world may remain unknown for a long time.
 
 ---
 
-# World Structure
+### World Structure
 
 Scholars sometimes describe the structure of the world in the following way:
 
@@ -141,7 +143,7 @@ Everything beyond the World Ocean remains a subject of speculation and explorati
 
 ---
 
-# Design Principle
+## Design Principle
 
 The Kaleidoscope world should always feel larger than what players can currently see.
 

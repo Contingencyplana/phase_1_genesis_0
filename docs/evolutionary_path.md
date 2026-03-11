@@ -8,7 +8,7 @@ The progression occurs through a series of stages grouped into several major lay
 
 ---
 
-# Overview Ladder
+## Overview Ladder
 
 The full conceptual ladder of the Kaleidoscope ecosystem is shown below.
 
@@ -42,11 +42,11 @@ Each stage builds upon the previous one, gradually expanding the scale of the sy
 
 ---
 
-# Layer 1 — Narrative Foundations
+## Layer 1 — Narrative Foundations
 
 This layer establishes the narrative world that attracts readers and contributors.
 
-## Stage 1 — Interactive Fiction
+### Stage 1 — Interactive Fiction
 
 The seed stage.
 
@@ -65,7 +65,7 @@ Create **narrative gravity** — a world people want to explore and contribute t
 
 ---
 
-## Stage 2 — Grand Saga
+### Stage 2 — Grand Saga
 
 As the story grows, the narrative becomes persistent.
 
@@ -85,11 +85,11 @@ Transform a collection of stories into a **living saga**.
 
 ---
 
-# Layer 2 — Safety and Governance
+## Layer 2 — Safety and Governance
 
 Once the narrative world exists, it can become a laboratory for exploring safe intelligence and cooperative systems.
 
-## Stage 3 — AI Safety Culture
+### Stage 3 — AI Safety Culture
 
 As the narrative world grows, participants begin exploring questions related to safe intelligence and cooperative systems.
 
@@ -116,7 +116,7 @@ Develop a shared philosophy of **safe intelligence and cooperative governance** 
 
 ---
 
-# Layer 3 — Gamengineering and Safety Infrastructure
+## Layer 3 — Gamengineering and Safety Infrastructure
 
 This layer transforms Kaleidoscope into a platform for building games, interactive systems, and the first safety infrastructure for intelligent agents.
 
@@ -126,7 +126,7 @@ Participants learn not only how to build games, but also how to construct safe i
 
 ---
 
-## Stage 4 — Adventures in Gamengineering
+### Stage 4 — Adventures in Gamengineering
 
 Participants begin experimenting with game mechanics.
 
@@ -146,7 +146,7 @@ Develop **gamengineering literacy** and create many small experimental games.
 
 ---
 
-## Stage 5 — Game World (Game Maker)
+### Stage 5 — Game World (Game Maker)
 
 Kaleidoscope matures into a full game creation environment.
 
@@ -166,7 +166,7 @@ Transform Kaleidoscope into a **game maker and world builder**.
 
 ---
 
-## Stage 6 — Creative Ecosystem
+### Stage 6 — Creative Ecosystem
 
 As the game worlds expand, a larger ecosystem forms.
 
@@ -187,11 +187,11 @@ Enable a **large collaborative creative ecosystem capable of safely hosting comp
 
 ---
 
-# Layer 4 — Evolving Civilizational Play
+## Layer 4 — Evolving Civilizational Play
 
 At this stage the ecosystem begins influencing AI participation, economics, and culture.
 
-## Stage 7 — Cybertoys
+### Stage 7 — Cybertoys
 
 Playful AI systems begin to appear within the ecosystem.
 
@@ -209,7 +209,7 @@ Develop safe and cooperative **AI participants** within the ecosystem.
 
 ---
 
-## Stage 8 — Cybercivilizations
+### Stage 8 — Cybercivilizations
 
 As AI agents and human participants interact within the ecosystem, complex societies begin to emerge.
 
@@ -233,7 +233,7 @@ Develop stable multi-agent cooperative societies within the ecosystem.
 
 ---
 
-## Stage 9 — Play as a Primary Mode of Participation
+### Stage 9 — Play as a Primary Mode of Participation
 
 The ecosystem begins to demonstrate that learning, contribution, and collaboration can occur through play.
 
@@ -251,7 +251,7 @@ Explore the possibility that meaningful activity may occur through **play rather
 
 ---
 
-## Stage 10 — Employ Everyone
+### Stage 10 — Employ Everyone
 
 The ecosystem expands to enable meaningful participation from very large numbers of people.
 
@@ -269,7 +269,7 @@ Create an ecosystem where **everyone can contribute meaningfully**.
 
 ---
 
-## Stage 11 — Cyberimagination
+### Stage 11 — Cyberimagination
 
 The ecosystem becomes a large collaborative environment for imagination and mythmaking.
 
@@ -286,7 +286,7 @@ Enable **civilization-scale collaborative imagination**.
 
 ---
 
-## Stage 12 — SHAGI
+### Stage 12 — SHAGI
 
 The final stage explores the development of:
 
@@ -312,13 +312,13 @@ Develop advanced intelligence systems **within a safe and cooperative ecosystem*
 
 ---
 
-# Twin Pivotal Principles
+## Twin Pivotal Principles
 
 Two core principles guide the long-term evolution of the Kaleidoscope ecosystem.
 
 ---
 
-## Principle 1 — Play Comes First
+### Principle 1 — Play Comes First
 
 Kaleidoscope must first and foremost be **fun**.
 
@@ -336,7 +336,7 @@ In short:
 
 ---
 
-## Principle 2 — Safety Emerges in Layers
+### Principle 2 — Safety Emerges in Layers
 
 Safety within Kaleidoscope develops gradually through three reinforcing layers.
 
@@ -353,7 +353,21 @@ Together these layers create an environment where increasingly powerful systems 
 
 ---
 
-# Summary
+## Continuous Evolution
+
+The stages described in this document represent an evolutionary ladder.
+
+However, once a stage emerges it does not disappear.
+
+All stages remain active simultaneously, continuously reinforcing and renewing the ecosystem.
+
+Stories continue to be written, safety culture continues to evolve, new tools continue to be built, and civilizational play continues to expand.
+
+The Kaleidoscope ecosystem therefore evolves not as a strict sequence, but as a layered system where earlier stages remain alive and productive.
+
+---
+
+## Summary
 
 The Kaleidoscope ecosystem evolves through twelve stages grouped into four major layers.
 

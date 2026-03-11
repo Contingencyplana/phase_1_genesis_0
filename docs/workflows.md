@@ -12,7 +12,7 @@ The Mature Workflow describes how developers and players interact with the syste
 
 ---
 
-# Initial Workflow (Bootstrapping Phase)
+## Initial Workflow (Bootstrapping Phase)
 
 At the beginning of the project, Kaleidoscope is used to construct the core systems of the ecosystem.
 
@@ -62,7 +62,7 @@ The first games hosted in Alpha TestBed may include:
 
 The goal of the Initial Workflow is to establish the infrastructure required for ongoing experimentation.
 
-# Mature Workflow (Normal Operation)
+### Mature Workflow (Normal Operation)
 
 Once the ecosystem is established, developers and players interact with the system through a stable development loop.
 
@@ -86,7 +86,7 @@ Developers iterate on their games in Kaleidoscope and publish updates through Al
 
 Players provide feedback through gameplay in Alpha TestBed.
 
-# Developer Workflow
+### Developer Workflow
 
 The developer workflow focuses on creating and improving games.
 
@@ -98,7 +98,7 @@ Typical steps include:
 4. Observe player feedback and playtesting results.
 5. Improve the game and repeat the process.
 
-# Player Workflow
+### Player Workflow
 
 Players interact with the ecosystem through Alpha TestBed.
 
@@ -112,7 +112,7 @@ Typical steps include:
 
 Alpha TestBed should remain simple so that players can quickly launch experimental games without unnecessary friction.
 
-# Continuous Evolution
+### Continuous Evolution
 
 As the ecosystem grows, the workflow becomes self-reinforcing.
 
@@ -128,17 +128,17 @@ Improved tools enhance Kaleidoscope
 
 This cycle supports the long-term evolution of the platform.
 
-# Summary
+### Summary
 
 The Kaleidoscope ecosystem operates through two workflows:
 
-## Initial Workflow
+### Initial Workflow
 
 Kaleidoscope builds Alpha TestBed and Alpha Dreaming.
 
 Alpha Dreaming publishes initial games to Alpha TestBed.
 
-## Mature Workflow
+### Mature Workflow
 
 Developers create games in Kaleidoscope.
 

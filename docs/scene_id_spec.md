@@ -9,7 +9,7 @@ Establishing clear rules early prevents structural problems as the story grows t
 
 ---
 
-# Purpose of Scene IDs
+## Purpose of Scene IDs
 
 Scene IDs serve several important functions:
 
@@ -22,7 +22,7 @@ Because of this, scene IDs must remain **stable and predictable**.
 
 ---
 
-# Scene ID Format
+### Scene ID Format
 
 All scene identifiers must follow this format:
 
@@ -56,7 +56,7 @@ Four digits allow the system to support **up to 9,999 scenes** without changing 
 
 ---
 
-# Scene File Naming
+### Scene File Naming
 
 Each scene must be stored in a file named using its scene identifier.
 
@@ -84,7 +84,7 @@ scene_0001.md
 
 ---
 
-# Scene ID Rules
+### Scene ID Rules
 
 The following rules must always be followed.
 
@@ -128,7 +128,7 @@ scene_0001.md
 
 ---
 
-# Scene Linking
+### Scene Linking
 
 Scenes connect to one another using scene IDs.
 
@@ -144,7 +144,7 @@ The target scene must exist as a valid scene file.
 
 ---
 
-# Starting Scene
+### Starting Scene
 
 By convention, the Kaleidoscope story begins with:
 
@@ -156,7 +156,7 @@ This scene acts as the **default entry point** into the story world unless the e
 
 ---
 
-# Future Expansion
+### Future Expansion
 
 The current system assumes a single namespace for scene identifiers.
 
@@ -170,7 +170,7 @@ If that occurs, scene ID namespaces may be extended while maintaining compatibil
 
 ---
 
-# Design Philosophy
+### Design Philosophy
 
 Scene identifiers should remain:
 

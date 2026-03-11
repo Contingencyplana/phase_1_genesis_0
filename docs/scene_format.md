@@ -14,7 +14,7 @@ The purpose of this document is to ensure that all scenes follow a **consistent 
 
 ---
 
-# Scene File Naming
+## Scene File Naming
 
 Each scene must be stored in a file named using the following pattern:
 
@@ -32,7 +32,7 @@ Rules:
 
 ---
 
-# Scene Structure
+### Scene Structure
 
 Every scene file follows the same basic structure:
 
@@ -63,7 +63,7 @@ Each section is described below.
 
 ---
 
-# Scene Header
+### Scene Header
 
 The first line identifies the scene.
 
@@ -83,7 +83,7 @@ scene_0001.md
 
 ---
 
-# Title
+### Title
 
 The title gives the scene a human-readable name.
 
@@ -98,7 +98,7 @@ Titles help writers and designers navigate the story structure.
 
 ---
 
-# Location
+### Location
 
 The location identifies where the scene takes place.
 
@@ -113,7 +113,7 @@ Locations help organize the world and may later be used by the engine for naviga
 
 ---
 
-# Scene Text
+### Scene Text
 
 The scene text contains the narrative description presented to the player.
 
@@ -136,7 +136,7 @@ Scenes should encourage the player to explore the world.
 
 ---
 
-# Choices
+### Choices
 
 The choices section defines the actions available to the player.
 
@@ -165,7 +165,7 @@ Choices represent meaningful actions such as:
 
 ---
 
-# Design Guidelines
+### Design Guidelines
 
 Scenes should follow several simple design principles.
 
@@ -187,7 +187,7 @@ The scene format should remain stable even as the story grows to include hundred
 
 ---
 
-# Minimal Example
+### Minimal Example
 
 ```
 # Scene: scene_0001
@@ -216,7 +216,7 @@ The harbor is already busy with sailors unloading cargo and merchants shouting a
 
 ---
 
-# Design Philosophy
+### Design Philosophy
 
 The scene format should remain:
 
