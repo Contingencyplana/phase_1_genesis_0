@@ -89,27 +89,42 @@ Transform a collection of stories into a **living saga**.
 
 Once the narrative world exists, it can become a laboratory for exploring safe intelligence and cooperative systems.
 
-## Stage 3 — AI Safety Layer
+## Stage 3 — AI Safety Culture
 
-The growing world becomes a laboratory for exploring ideas related to safe intelligence.
+As the narrative world grows, participants begin exploring questions related to safe intelligence and cooperative systems.
 
-Through story and gameplay, participants explore concepts such as:
+The world becomes a laboratory for experimenting with ideas about how intelligent agents—human or artificial—might coexist safely.
 
-- cooperation
-- governance
-- safe evolution
-- alignment
-- collective decision making
+Through story, gameplay, and discussion, participants explore concepts such as:
 
-Goal:
+- cooperation and trust  
+- governance and stewardship  
+- safe evolution of complex systems  
+- alignment of incentives  
+- collective decision making  
+- responsibility and restraint  
 
-Develop a **culture of safe intelligence** before powerful AI systems appear.
+These ideas emerge organically through the narrative world and the small games that inhabit it.
+
+The goal is **not** to build powerful AI yet.
+
+The goal is to develop a **culture of safe intelligence** before powerful systems appear.
+
+**Goal:**
+
+Develop a shared philosophy of **safe intelligence and cooperative governance** before advanced AI agents enter the ecosystem.
 
 ---
 
-# Layer 3 — Gamengineering Platform
+# Layer 3 — Gamengineering and Safety Infrastructure
 
-This layer transforms Kaleidoscope into a platform for building games and interactive systems.
+This layer transforms Kaleidoscope into a platform for building games, interactive systems, and the first safety infrastructure for intelligent agents.
+
+The ideas explored in the AI Safety Culture layer begin to take concrete form as tools, simulations, and experimental systems.
+
+Participants learn not only how to build games, but also how to construct safe interactive environments where complex agents can operate.
+
+---
 
 ## Stage 4 — Adventures in Gamengineering
 
@@ -141,6 +156,7 @@ Capabilities include:
 - building game rooms
 - designing interactive systems
 - constructing persistent worlds
+- building simulation environments
 
 The first large game worlds begin to emerge.
 
@@ -161,16 +177,17 @@ Participants create:
 - systems
 - expansions
 - experiments
+- safety simulations
 
 The ecosystem becomes increasingly self-sustaining.
 
 Goal:
 
-Enable a **large collaborative creative ecosystem**.
+Enable a **large collaborative creative ecosystem capable of safely hosting complex intelligent agents.**
 
 ---
 
-# Layer 4 — Civilization-Scale Evolution
+# Layer 4 — Evolving Civilizational Play
 
 At this stage the ecosystem begins influencing AI participation, economics, and culture.
 
