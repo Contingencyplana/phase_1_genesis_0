@@ -9,7 +9,7 @@ The purpose of this document is simply to define the **first region** where the 
 
 ---
 
-# The Archipelago
+## The Archipelago
 
 The story begins in a scattered chain of islands known collectively as **The Archipelago**.
 
@@ -23,7 +23,7 @@ Others believe the dream has only just begun.
 
 ---
 
-# The First Region — Harbor Island
+## The First Region — Harbor Island
 
 The first scenes of the Interactive Novel take place on **Harbor Island**, a busy port where travelers gather.
 
@@ -37,7 +37,7 @@ These locations allow players to explore different directions immediately.
 
 ---
 
-# Atmosphere
+## Atmosphere
 
 The world should feel:
 
@@ -50,7 +50,7 @@ Even when characters disagree or conflict arises, the setting should encourage c
 
 ---
 
-# Rumors of the Visionary
+## Rumors of the Visionary
 
 Throughout the Archipelago, travelers whisper about a mysterious visionary.
 
@@ -71,7 +71,7 @@ Players gradually uncover these fragments as they explore the world.
 
 ---
 
-# Initial Locations
+## Initial Locations
 
 The Interactive Novel begins with three accessible locations:
 
@@ -85,7 +85,7 @@ These locations form the starting point of the Kaleidoscope saga.
 
 ---
 
-# Future Expansion
+## Future Expansion
 
 Over time the world may expand beyond Harbor Island.
 
@@ -100,7 +100,7 @@ These regions should appear gradually as the story grows.
 
 ---
 
-# Design Principle
+## Design Principle
 
 The world should feel larger than what is immediately visible.
 

@@ -8,7 +8,7 @@ Story arcs provide a middle layer of organization between **individual scenes** 
 
 ---
 
-# Structural Layers
+## Structural Layers
 
 The Kaleidoscope narrative structure can be understood as three layers:
 
@@ -28,7 +28,7 @@ This layered structure allows the narrative to expand while remaining organized.
 
 ---
 
-# What Is a Story Arc
+## What Is a Story Arc
 
 A story arc is a **collection of scenes that belong to the same narrative area or theme**.
 
@@ -45,7 +45,7 @@ Each arc contains multiple scenes that explore the location or storyline in grea
 
 ---
 
-# Scene Ranges
+## Scene Ranges
 
 Story arcs are organized using **scene identifier ranges**.
 
@@ -64,7 +64,7 @@ This structure allows each arc to grow without requiring scene renumbering.
 
 ---
 
-# Folder Organization
+## Folder Organization
 
 Story arcs correspond directly to folders inside the scenes directory.
 
@@ -94,7 +94,7 @@ Each folder contains scenes belonging to a specific arc.
 
 ---
 
-# Relationship to the Scene Graph
+## Relationship to the Scene Graph
 
 The **scene graph** connects scenes across arcs through player choices.
 
@@ -114,7 +114,7 @@ Story arcs organize scenes, while the scene graph defines how those scenes conne
 
 ---
 
-# Expansion of Story Arcs
+## Expansion of Story Arcs
 
 As the Kaleidoscope world grows, additional arcs may be added.
 
@@ -130,7 +130,7 @@ Each arc introduces new scenes, characters, and discoveries while remaining comp
 
 ---
 
-# Design Philosophy
+## Design Philosophy
 
 Story arcs should remain:
 

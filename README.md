@@ -15,11 +15,11 @@ The workspace focuses on building a small experimental platform that can evolve 
 
 ---
 
-# Core Systems
+## Core Systems
 
 Three core systems form the foundation of this workspace.
 
-## Kaleidoscope
+### Kaleidoscope
 
 Kaleidoscope is the creation system.
 
@@ -34,7 +34,7 @@ The first system built with Kaleidoscope is the **Interactive Novel**.
 
 ---
 
-## Alpha Dreaming
+### Alpha Dreaming
 
 Alpha Dreaming is the publishing bridge.
 
@@ -48,7 +48,7 @@ Alpha Dreaming acts as the developer interface between creation and play.
 
 ---
 
-## Alpha TestBed
+### Alpha TestBed
 
 Alpha TestBed is the play environment.
 
@@ -64,7 +64,7 @@ The TestBed is intentionally simple so that experimentation can happen rapidly.
 
 ---
 
-# Initial Development Focus
+## Initial Development Focus
 
 The first system being built inside Kaleidoscope is an **Interactive Novel**.
 
@@ -79,7 +79,7 @@ The Interactive Novel represents **Stage 1 — Interactive Fiction** in the Kale
 
 ---
 
-# Workspace Structure
+## Workspace Structure
 
 ```
 phase_1_genesis_0/
@@ -97,7 +97,7 @@ docs/               → architecture and design documentation
 
 ---
 
-# Development Philosophy
+## Development Philosophy
 
 The project begins extremely small.
 
@@ -113,7 +113,7 @@ The emphasis is on **experimentation, simplicity, and iterative growth**.
 
 ---
 
-# Guiding Principle
+## Guiding Principle
 
 Build small.
 

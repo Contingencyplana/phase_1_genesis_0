@@ -44,6 +44,7 @@ Scene title
 
 ## Location
 Location name
+```
 
 ---
 
@@ -55,6 +56,7 @@ Narrative description of the scene.
 
 ## Choices
 
+```
 - Choice description → scene_target
 - Choice description → scene_target
 ```
@@ -199,6 +201,7 @@ Arrival at Harbor Island
 
 ## Location
 Harbor Village
+```
 
 ---
 
@@ -211,6 +214,7 @@ The harbor is already busy with sailors unloading cargo and merchants shouting a
 
 ## Choices
 
+```
 - Walk through the harbor village → scene_0002
 - Visit the library on the hill → scene_0003
 - Follow the forest path → scene_0004
