@@ -147,3 +147,26 @@ Initial target:
 Additional characters can be introduced later as new regions, story threads, and narrative arcs appear.
 
 The goal is to allow the cast of characters to grow naturally alongside the world itself.
+
+## Topsy and Thorn
+
+Two unusual figures appear near the end of the earliest Kaleidoscope narratives.
+
+Unlike the other characters, Topsy and Thorn do not seem to belong to any established community or tradition. Their origins are unclear, and their nature is not immediately understood.
+
+They appear almost as if they are **newly awakened**, encountering the world with curiosity and uncertainty.
+
+At this stage they are simply two mysterious beings within the unfolding story. They possess no authority and no defined role within the wider world.
+
+Players may encounter them through unusual scenes or fragments of narrative that hint at deeper possibilities.
+
+Topsy often appears playful, inquisitive, and open to new ideas.
+
+Thorn tends to be more cautious and observant, questioning what is happening around them.
+
+Together they represent two different responses to the unknown.
+
+Their true significance is not yet understood.
+
+Later stages of the Kaleidoscope world may reveal that these two figures are connected to the deeper evolution of the ecosystem itself.
+
