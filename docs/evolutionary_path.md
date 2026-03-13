@@ -21,7 +21,7 @@ AI Safety Layer
         ↓
 Adventures in Gamengineering
         ↓
-Game World (Game Maker)
+Game Worlds (Game Maker)
         ↓
 Creative Ecosystem
         ↓
