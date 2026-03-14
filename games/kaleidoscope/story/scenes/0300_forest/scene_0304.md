@@ -36,6 +36,8 @@ You clear the surface with your hand.
 
 The same symbol has been carved deeply into the stone.
 
+The marking matches the symbol you saw earlier in the journals kept inside the island library.
+
 For a moment the forest grows strangely quiet.
 
 The wind stills.

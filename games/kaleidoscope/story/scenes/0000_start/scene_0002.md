@@ -21,6 +21,11 @@ A path disappears between the trees at the edge of the village, leading into the
 
 Closer to the docks, a few sailors linger beside stacked cargo crates, sharing stories of distant islands.
 
+Some of the sailors mention the old library on the hill. Others warn travelers about strange stones hidden deep in the forest.
+
+Some sailors mention the old library on the hill. Others warn travelers about strange stones hidden deep in the forest.
+
+
 Where would you like to go?
 
 ---
