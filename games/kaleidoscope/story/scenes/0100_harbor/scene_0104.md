@@ -36,6 +36,7 @@ The wind carries the scent of pine and earth from the distant woods.
 
 ## Choices
 
-- Follow the forest path → scene_0004
 - Ask about the library on the hill → scene_0103
+- Continue talking with the sailor → scene_0101
+- Follow the forest path → scene_0004
 - Return to the harbor village → scene_0002

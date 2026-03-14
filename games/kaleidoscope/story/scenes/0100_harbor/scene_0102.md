@@ -34,6 +34,7 @@ The harbor noise swells around you again as the sailor waits to see what you wil
 
 ## Choices
 
-- Ask about the library → scene_0003
-- Ask about the forest rumors → scene_0004
-- Continue exploring the harbor → scene_0103
+- Ask about the library on the hill → scene_0103
+- Ask about the forest beyond the village → scene_0104
+- Continue talking with the sailor → scene_0101
+- Return to the harbor village → scene_0002

@@ -32,6 +32,7 @@ The harbor breeze carries the distant sound of gulls as you consider your next m
 
 ## Choices
 
-- Climb the path to the library → scene_0003
 - Ask about the forest beyond the village → scene_0104
+- Continue talking with the sailor → scene_0101
+- Head up to the library → scene_0003
 - Return to the harbor village → scene_0002
