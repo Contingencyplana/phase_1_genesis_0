@@ -36,7 +36,7 @@ You clear the surface with your hand.
 
 The same symbol has been carved deeply into the stone.
 
-The marking matches the symbol you saw earlier in the journals kept inside the island library.
+The marking resembles the strange symbol recorded in the island library journals.
 
 For a moment the forest grows strangely quiet.
 

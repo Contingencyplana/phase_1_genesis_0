@@ -30,7 +30,7 @@ Another passage has been underlined twice.
 
 *"If my calculations are correct, the island may be part of something far older than the village itself."*
 
-You remember seeing the same strange symbol carved into stone somewhere along the forest trail.
+You begin to suspect the same strange symbol may appear somewhere in the island forest.
 
 The next few pages describe expeditions into the forest and long nights spent studying maps of the surrounding seas.
 

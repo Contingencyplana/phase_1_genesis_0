@@ -23,8 +23,6 @@ Closer to the docks, a few sailors linger beside stacked cargo crates, sharing s
 
 Some of the sailors mention the old library on the hill. Others warn travelers about strange stones hidden deep in the forest.
 
-Some sailors mention the old library on the hill. Others warn travelers about strange stones hidden deep in the forest.
-
 
 Where would you like to go?
 
