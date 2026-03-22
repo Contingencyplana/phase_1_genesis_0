@@ -10,7 +10,7 @@ Each entry lists scene ID, title, location, a short purpose note, and outgoing l
 
 ---
 
-## Opening Scenes (0000–0014)
+## Opening and Dockside Scenes (0000–0014)
 
 **scene_0001** — Arrival at Harbor Island  
 Location: Harbor Village  
