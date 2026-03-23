@@ -26,4 +26,3 @@ From here, the village road climbs inland, with paths beyond it leading toward t
 - Visit the library on the hill → scene_0003
 - Follow the forest path → scene_0004
 - Speak with an old captain repairing a small sailboat → scene_0011
-

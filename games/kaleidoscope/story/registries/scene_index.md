@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current playable Harbor Island and Brinehook Island scenes.
+Current playable Harbor Island, Brinehook Island, and Lantern Key scenes.
 
 ## Format
 
@@ -39,8 +39,8 @@ Links: 0002, 0003, 0004, 0011
 
 **scene_0011** — The Old Captain  
 Location: Harbor Docks  
-Purpose: Introduces the old captain and his offer of a short sailing trip to a nearby island.  
-Links: 0012, 0013, 0014, 0010
+Purpose: Introduces the old captain and his grounded short-run routes to nearby islands, including family visits and Lantern Key work crossings.  
+Links: 0012, 0501, 0013, 0014, 0010
 
 **scene_0012** — A Nearby Island  
 Location: Harbor Docks  
@@ -206,6 +206,50 @@ Links: 0406, 0405, 0408
 **scene_0408** — Return at Dusk  
 Location: Brinehook Wharf  
 Purpose: Grounded departure scene; short visit concludes with sail back to Harbor Island.  
+Links: 0010
+
+---
+
+## Lantern Key Scenes (0501–0508)
+
+**scene_0501** — Crossing to Lantern Key  
+Location: Open Water  
+Purpose: Rougher exposed crossing with the old captain; establishes Lantern Key as a working watch-and-weather island in the archipelago network.  
+Links: 0502
+
+**scene_0502** — Landing Pier  
+Location: Lantern Key Pier  
+Purpose: Arrival scene; introduces Lantern Key's windworn, duty-first atmosphere and core routes inland.  
+Links: 0503, 0505, 0506
+
+**scene_0503** — Beacon Yard  
+Location: Beacon Yard  
+Purpose: Infrastructure scene focused on oil, rope, tools, and signal hardware that keep sea-lanes functioning.  
+Links: 0504, 0505, 0502
+
+**scene_0504** — The Keeper  
+Location: Beacon Yard  
+Purpose: Practical conversation with Lantern Key's keeper about weather logging, reliable signals, and inter-island dependence.  
+Links: 0505, 0506, 0503
+
+**scene_0505** — Lantern Tower Path  
+Location: Tower Path  
+Purpose: Exposed transition climb with a lonely coastal tone; connects yard, tower, and older rock shelf.  
+Links: 0506, 0507, 0503, 0502
+
+**scene_0506** — From the Lantern Tower  
+Location: Lantern Tower  
+Purpose: Elevated practical vista of channels and routes; reinforces lantern duty as public infrastructure.  
+Links: 0507, 0505, 0502
+
+**scene_0507** — The Old Foundation Stone  
+Location: Rock Shelf Below the Tower  
+Purpose: Subtle clue scene; an older foundation stone bears a faint worn circle-and-dot mark beneath newer tower work.  
+Links: 0506, 0505, 0508
+
+**scene_0508** — Return Before Nightfall  
+Location: Lantern Key Pier  
+Purpose: Clean grounded departure by sail; confirms Lantern Key as part of ordinary inter-island life.  
 Links: 0010
 
 ---

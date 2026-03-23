@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current Harbor Island and nearby Brinehook characters. Includes named roles, recurring figures, and one historical character known only through documents.
+Current Harbor Island plus nearby Brinehook and Lantern Key characters. Includes named roles, recurring figures, and one historical character known only through documents.
 
 ---
 
@@ -54,11 +54,25 @@ Current Harbor Island and nearby Brinehook characters. Includes named roles, rec
 **Role:** Near-retirement sailor; off-island travel hook  
 **What they know or imply:**  
 - Makes occasional short sailing trips to a nearby island where family live  
+- Also runs practical short crossings to Lantern Key when weather windows and harbor needs line up  
 - The waters are manageable in good weather but always deserve respect  
 - Is finding it harder to handle the sailboat alone and is looking for someone to help on the next trip  
 - Has offered the player a place on the next crossing if they meet him at first light  
 
-**Scenes:** 0011, 0012, 0013, 0014
+**Scenes:** 0011, 0012, 0013, 0014, 0401, 0501
+
+---
+
+## The Keeper
+
+**Current location:** Lantern Key, Beacon Yard and lantern tower work areas  
+**Role:** Public-service beacon keeper; weather watcher and lane-safety steward  
+**What they know or imply:**  
+- Maintains the lantern, logs wind and sea conditions, and manages warning signals for nearby channels  
+- Frames island life as interdependent practical work where missed signals can harm other crews  
+- Notes the tower stands over older stone than current records clearly explain, without treating it as legend  
+
+**Scenes:** 0503 (present), 0504, 0507
 
 ---
 

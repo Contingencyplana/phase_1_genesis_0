@@ -25,6 +25,7 @@ He wipes his hands on a cloth and studies the sky over the harbor.
 ## Choices
 
 - Ask where he sails → scene_0012
+- Ask whether he could take you on another short run → scene_0501
 - Ask why he needs help → scene_0013
 - Say you may be willing to help tomorrow → scene_0014
 - Return to the docks → scene_0010
