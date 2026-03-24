@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current Harbor Island mystery structure with playable expansions to Brinehook Island and Lantern Key.
+Current Harbor Island mystery structure with playable expansions to Brinehook Island, Lantern Key, and Saint Elmo's Rest.
 
 ---
 
@@ -20,9 +20,9 @@ An unnamed scholar visited Harbor Island at an unknown point in the past. They l
 ## The Circle-and-Dot Symbol
 
 **What is established:**  
-A simple symbol — a circle enclosing a single dot — appears repeatedly across Harbor Island. It is found in the Visionary's journals and library shelves, scratched into the old forest signpost, carved into a stone in the soil of the forest path, and cut deeply into the central slab of the stone circle. The same symbol appears on the stone marker in the Waypoint dream. A faint, heavily eroded version is present on a weathered marker on Brinehook's lookout rise, and another worn instance appears on an older foundation stone beneath Lantern Key's tower works. No character has yet explained its origin or meaning within the story.
+A simple symbol — a circle enclosing a single dot — appears repeatedly across Harbor Island. It is found in the Visionary's journals and library shelves, scratched into the old forest signpost, carved into a stone in the soil of the forest path, and cut deeply into the central slab of the stone circle. The same symbol appears on the stone marker in the Waypoint dream. A faint, heavily eroded version is present on a weathered marker on Brinehook's lookout rise, another worn instance appears on an older foundation stone beneath Lantern Key's tower works, and a faint salt-worn mark appears on an old resting stone at Saint Elmo's Rest. No character has yet explained its origin or meaning within the story.
 
-**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 9001, 9201  
+**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 0607, 9001, 9201  
 **Current status:** Active and recurring across multiple inhabited islands. The symbol has been encountered by the player in several physical sites plus dream scenes (Waypoint and the milestone priestess dream).  
 **Likely future direction:** The symbol likely connects the island's stone sites to a wider network. Expanding to other islands may reveal whether the symbol appears elsewhere, and whether the Visionary found its source.
 
@@ -53,10 +53,10 @@ After a day on Harbor Island, the player dreams of standing on a small island be
 ## The Captain's Nearby Island Hook
 
 **What is established:**  
-An old captain at the harbor docks repairs a small sailboat and offers the player the chance to accompany him on short sailing runs. He is practical, weathered, and near retirement. He needs help handling the boat. If the player agrees, the captain asks them to meet at the docks at first light. This grounded travel thread is now playable both as a family crossing to Brinehook and as a practical route to Lantern Key.
+An old captain at the harbor docks repairs a small sailboat and offers the player the chance to accompany him on short sailing runs. He is practical, weathered, and near retirement. He needs help handling the boat. If the player agrees, the captain asks them to meet at the docks at first light. This grounded travel thread is now playable as a family crossing to Brinehook, a practical route to Lantern Key, and a weather-refuge run to Saint Elmo's Rest.
 
-**Key scenes:** 0011, 0012, 0013, 0014, 0401, 0402, 0403, 0408, 0501, 0502, 0508  
-**Current status:** Executed and stable. The player can depart Harbor Island, visit either Brinehook or Lantern Key, and return by ordinary sail in grounded loops.  
+**Key scenes:** 0011, 0012, 0013, 0014, 0401, 0402, 0403, 0408, 0501, 0502, 0508, 0601, 0602, 0608  
+**Current status:** Executed and stable. The player can depart Harbor Island, visit Brinehook, Lantern Key, or Saint Elmo's Rest, and return by ordinary sail in grounded loops.  
 **Likely future direction:** This thread remains a practical travel spine for low-stakes inter-island movement, relationship-building, and public-route worldbuilding beyond Harbor Island.
 
 ---
@@ -64,8 +64,8 @@ An old captain at the harbor docks repairs a small sailboat and offers the playe
 ## The Wider Archipelago
 
 **What is established:**  
-Several threads suggest an archipelago beyond Harbor Island. The Visionary's maps in the library show the surrounding ocean marked with arrows, numbers, and symbols resembling calculations rather than navigation notes, with an annotation reading "The island lies at the intersection." The Waypoint dream shows multiple islands visible across the sea. The old captain mentions nearby routes and implies he has made these crossings many times. The fishermen note changed currents and odd lights on the water, which they cannot explain. The player can now physically cross to Brinehook Island and Lantern Key and return, confirming both domestic and public-service island life beyond Harbor Island.
+Several threads suggest an archipelago beyond Harbor Island. The Visionary's maps in the library show the surrounding ocean marked with arrows, numbers, and symbols resembling calculations rather than navigation notes, with an annotation reading "The island lies at the intersection." The Waypoint dream shows multiple islands visible across the sea. The old captain mentions nearby routes and implies he has made these crossings many times. The fishermen note changed currents and odd lights on the water, which they cannot explain. The player can now physically cross to Brinehook Island, Lantern Key, and Saint Elmo's Rest and return, confirming domestic life, public duty infrastructure, and storm-refuge custom beyond Harbor Island.
 
-**Key scenes:** 0205, 9001, 0012, 0107, 0401, 0402, 0406, 0408, 0501, 0502, 0504, 0506, 0508  
-**Current status:** Expanded but still partial. Two nearby islands (Brinehook and Lantern Key) are now playable, while the broader network remains mostly unknown.  
-**Likely future direction:** Further islands can continue the proven grounded pattern: practical local functions first, deeper mystery signals second.
+**Key scenes:** 0205, 9001, 0012, 0107, 0401, 0402, 0406, 0408, 0501, 0502, 0504, 0506, 0508, 0601, 0602, 0605, 0606, 0608  
+**Current status:** Expanded but still partial. Three nearby islands (Brinehook, Lantern Key, and Saint Elmo's Rest) are now playable, while the broader network remains mostly unknown.  
+**Likely future direction:** Further islands can continue the proven grounded pattern: practical local functions first, deeper mystery signals second. Saint Elmo's Rest also establishes how ordinary sailors preserve old customs around places they do not fully understand.

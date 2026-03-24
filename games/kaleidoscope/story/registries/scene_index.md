@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current playable Harbor Island, Brinehook Island, and Lantern Key scenes.
+Current playable Harbor Island, Brinehook Island, Lantern Key, and Saint Elmo's Rest scenes.
 
 ## Format
 
@@ -39,8 +39,8 @@ Links: 0002, 0003, 0004, 0011
 
 **scene_0011** — The Old Captain  
 Location: Harbor Docks  
-Purpose: Introduces the old captain and his grounded short-run routes to nearby islands, including family visits and Lantern Key work crossings.  
-Links: 0012, 0501, 0013, 0014, 0010
+Purpose: Introduces the old captain and his grounded short-run routes to nearby islands, including family visits, Lantern Key work crossings, and the Saint Elmo's Rest refuge run.  
+Links: 0012, 0501, 0601, 0013, 0014, 0010
 
 **scene_0012** — A Nearby Island  
 Location: Harbor Docks  
@@ -251,6 +251,50 @@ Links: 0506, 0505, 0508
 Location: Lantern Key Pier  
 Purpose: Clean grounded departure by sail; direct return remains available, with an optional sleep-on-crossing branch into a milestone dream.  
 Links: 0010, 9201
+
+---
+
+## Saint Elmo's Rest Scenes (0601–0608)
+
+**scene_0601** — Crossing Toward Saint Elmo's Rest  
+Location: Open Water  
+Purpose: The captain frames Saint Elmo's Rest as a weather-refuge stop used when crossings turn bad, not a home port.  
+Links: 0602
+
+**scene_0602** — Storm Jetty  
+Location: Storm Jetty  
+Purpose: Arrival at a hard-used refuge landing with blackened posts, wet boards, and shelter-first island design.  
+Links: 0603, 0605, 0606
+
+**scene_0603** — The Refuge House  
+Location: Refuge House  
+Purpose: Communal waystation interior shaped by many temporary crews, bad-weather nights, and practical shared supplies.  
+Links: 0604, 0605, 0606, 0602
+
+**scene_0604** — The Caretaker  
+Location: Refuge House  
+Purpose: Grounded caretaker dialogue on sea custom as practical caution when conditions turn.  
+Links: 0605, 0606, 0603
+
+**scene_0605** — The Bell Post  
+Location: Bell Post  
+Purpose: Fog bell scene emphasizing warning practice and survival culture across routine crossings.  
+Links: 0603, 0606, 0602
+
+**scene_0606** — The Shrine Niche  
+Location: Shrine Niche  
+Purpose: Sailor token custom scene where offerings are framed as habit, respect, and caution rather than overt superstition.  
+Links: 0607, 0604, 0605
+
+**scene_0607** — The Resting Stone  
+Location: Wind Path  
+Purpose: Subtle clue scene; an older stone near the path bears a faint circle-and-dot mark beneath salt and lichen.  
+Links: 0606, 0608
+
+**scene_0608** — Crossing Back in the Evening Light  
+Location: Storm Jetty  
+Purpose: Grounded departure before worsening weather; returns player cleanly to Harbor Island while preserving local custom's quiet ambiguity.  
+Links: 0010
 
 ---
 

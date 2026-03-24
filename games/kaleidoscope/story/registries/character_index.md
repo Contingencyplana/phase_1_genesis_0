@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current Harbor Island plus nearby Brinehook and Lantern Key characters. Includes named roles, recurring figures, and one historical character known only through documents.
+Current Harbor Island plus nearby Brinehook, Lantern Key, and Saint Elmo's Rest characters. Includes named roles, recurring figures, and one historical character known only through documents.
 
 ---
 
@@ -55,11 +55,25 @@ Current Harbor Island plus nearby Brinehook and Lantern Key characters. Includes
 **What they know or imply:**  
 - Makes occasional short sailing trips to a nearby island where family live  
 - Also runs practical short crossings to Lantern Key when weather windows and harbor needs line up  
+- Knows Saint Elmo's Rest as a refuge stop used when weather closes in during exposed crossings  
 - The waters are manageable in good weather but always deserve respect  
 - Is finding it harder to handle the sailboat alone and is looking for someone to help on the next trip  
 - Has offered the player a place on the next crossing if they meet him at first light  
 
-**Scenes:** 0011, 0012, 0013, 0014, 0401, 0501
+**Scenes:** 0011, 0012, 0013, 0014, 0401, 0501, 0601, 0608
+
+---
+
+## The Caretaker (Saint Elmo's Rest)
+
+**Current location:** Saint Elmo's Rest, Refuge House and nearby wind path  
+**Role:** Refuge steward; practical keeper of shelter routines and sea custom  
+**What they know or imply:**  
+- Maintains the communal refuge house for transient crews waiting out weather  
+- Frames bell-ringing and token-offering habits as practical caution rather than mysticism  
+- Notes the old resting stone predates current refuge structures and records without offering grand explanations  
+
+**Scenes:** 0603 (present), 0604, 0606, 0607
 
 ---
 
