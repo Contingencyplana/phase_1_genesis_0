@@ -22,8 +22,8 @@ An unnamed scholar visited Harbor Island at an unknown point in the past. They l
 **What is established:**  
 A simple symbol — a circle enclosing a single dot — appears repeatedly across Harbor Island. It is found in the Visionary's journals and library shelves, scratched into the old forest signpost, carved into a stone in the soil of the forest path, and cut deeply into the central slab of the stone circle. The same symbol appears on the stone marker in the Waypoint dream. A faint, heavily eroded version is present on a weathered marker on Brinehook's lookout rise, and another worn instance appears on an older foundation stone beneath Lantern Key's tower works. No character has yet explained its origin or meaning within the story.
 
-**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 9001  
-**Current status:** Active and recurring across multiple inhabited islands. The symbol has been encountered by the player in several physical sites plus the Waypoint dream.  
+**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 9001, 9201  
+**Current status:** Active and recurring across multiple inhabited islands. The symbol has been encountered by the player in several physical sites plus dream scenes (Waypoint and the milestone priestess dream).  
 **Likely future direction:** The symbol likely connects the island's stone sites to a wider network. Expanding to other islands may reveal whether the symbol appears elsewhere, and whether the Visionary found its source.
 
 ---
@@ -42,11 +42,11 @@ The forest contains two sets of stone ruins. The first is a small collapsed stru
 ## The Dream Islands and Waypoint Island
 
 **What is established:**  
-After a day on Harbor Island, the player dreams of standing on a small island beneath unfamiliar stars. A stone marker bearing the circle-and-dot symbol stands at the island's centre. Looking outward across the sea, other islands are visible — some glowing softly, others lit by distant lightning, others silent. The dream suggests the symbol connects a network of places. The player wakes without explanation.
+After a day on Harbor Island, the player dreams of standing on a small island beneath unfamiliar stars. A stone marker bearing the circle-and-dot symbol stands at the island's centre. Looking outward across the sea, other islands are visible — some glowing softly, others lit by distant lightning, others silent. The dream suggests the symbol connects a network of places. Later, on an optional sleep crossing from Lantern Key, the player dreams of a fog-shrouded roving island and meets a priestess-like watcher who speaks of folded moments, returning tides, and lives nested within dreams. Recurrence is named in symbolic language, but not explained.
 
-**Key scenes:** 9001  
-**Current status:** Established as a dream sequence. Currently disconnected from the waking story, though the symbol connects it to the library and forest threads.  
-**Likely future direction:** The Waypoint scene may become a recurring transition mechanic between islands, or a narrative signal that the player has reached a meaningful point in the story. The identity and purpose of the other islands seen in the dream has not yet been established.
+**Key scenes:** 9001, 9201  
+**Current status:** Established as a recurring dream thread with one optional milestone branch from grounded travel. The dreams now acknowledge déjà vu/recurrence through mythic imagery while preserving ambiguity.  
+**Likely future direction:** Dream islands can continue to mark narrative thresholds while staying incomplete and symbolic. The seam language, repeating tides, and selective sensitivity to recurrence can be developed gradually without direct metaphysical exposition.
 
 ---
 

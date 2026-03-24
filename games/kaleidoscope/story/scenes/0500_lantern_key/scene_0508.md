@@ -29,3 +29,4 @@ Not distant, just necessary.
 ## Choices
 
 - Sail back to Harbor Island → scene_0010
+- Sail back to Harbor Island and sleep on the journey → scene_9201

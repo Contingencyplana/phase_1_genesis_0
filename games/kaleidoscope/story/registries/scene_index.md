@@ -249,14 +249,19 @@ Links: 0506, 0505, 0508
 
 **scene_0508** — Return Before Nightfall  
 Location: Lantern Key Pier  
-Purpose: Clean grounded departure by sail; confirms Lantern Key as part of ordinary inter-island life.  
-Links: 0010
+Purpose: Clean grounded departure by sail; direct return remains available, with an optional sleep-on-crossing branch into a milestone dream.  
+Links: 0010, 9201
 
 ---
 
-## Dream / Waypoint (9001)
+## Dream / Waypoint / Milestone (9001, 9201)
 
 **scene_9001** — Waypoint Island  
 Location: Dream  
 Purpose: Player dreams of a small island with a stone marker bearing the circle-and-dot symbol; other islands are visible in the distance, suggesting a wider world.  
 Links: 0002
+
+**scene_9201** — The Priestess in the Mist  
+Location: Dream  
+Purpose: Milestone dream on a fog-shrouded roving island; a priestess speaks in symbolic language about returning tides, folded moments, and lives nested within dreams.  
+Links: 0010
