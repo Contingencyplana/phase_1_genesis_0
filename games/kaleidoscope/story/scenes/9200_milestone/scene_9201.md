@@ -14,8 +14,6 @@ Night water rocks the hull in long, even breaths.
 
 You sleep before the harbor lights are fully gone.
 
----
-
 You stand barefoot on wet stone in a pale, windless mist.
 
 An island surrounds you, though it feels less anchored than remembered, as if it has drifted here only for this hour.
@@ -69,8 +67,6 @@ Fog thickens. Her outline grows thin, as if the mist is taking her shape back.
 "When the hour repeats," she says softly, "do not fear it. Listen for what changed."
 
 The sea answers with a low bell-tone from somewhere you cannot see.
-
----
 
 You wake to gulls, rope-wood creak, and the ordinary smell of harbor tar.
 
