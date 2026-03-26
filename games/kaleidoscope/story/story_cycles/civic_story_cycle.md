@@ -174,6 +174,14 @@ It should remain human, practical, and story-rich.
 
 ## The Four-Part Civic Harbor Cluster
 
+The Civic Story Cycle should take the form of a **Civic Harbor Cluster**.
+
+It should not be shaped as four more separate sampler-islands.
+
+Instead, it should be shaped around one larger civic node and three strongly related surrounding civic pressures.
+
+The recommended four-part silhouette is:
+
 ### 1. The Civic Harbor / Market Town
 
 This should be the first truly dense public place in the archipelago.
@@ -245,7 +253,110 @@ The foundational cycle introduced older traces in relatively quiet or local cont
 
 The civic cycle should show what happens when those traces matter inside a denser public world.
 
+## Working Arc Roles
+
+### 0700_tidemarket/
+
+**Role in the Civic Story Cycle:**  
+This is the **social and public center** of the cycle.
+
+It should introduce the player to the first place in the archipelago that feels genuinely busy, layered, and civic rather than merely local. Its job is to make public life visible through traffic, trade, crowding, rumor, competing needs, and overlapping viewpoints.
+
+**What it should do:**
+
+- establish Tidemarket as the main civic harbor / trade settlement
+- show that many routes and many lives now converge in one place
+- introduce a denser social atmosphere than Harbor Island
+- make the player feel that the archipelago is beginning to organize itself
+- seed the tensions that will later deepen in the other three arcs
+
+**Main pressure:**  
+Public life, exchange, crowding, and the beginning of visible civic friction.
+
+**Why it matters:**  
+Without this arc, the civic cycle has no true center. This is the place that proves the world is growing upward into shared social life.
+
 ---
+
+### 0800_ledger_house/
+
+**Role in the Civic Story Cycle:**  
+This is the **institutional and memory layer** of the cycle.
+
+It should show that the archipelago is beginning to keep track of itself through records, warnings, route information, exchanges, notices, and shared practical memory. It is not meant to feel like a giant bureaucracy. It should feel like the first visible house of coordination.
+
+**What it should do:**
+
+- introduce organized record-keeping as part of public life
+- show how warnings, notices, routes, and transactions accumulate
+- create a place where information matters as much as goods
+- let different viewpoints about order, explanation, and responsibility become visible
+- begin showing that memory can be shared, stored, and disputed
+
+**Main pressure:**  
+How a growing society remembers, warns, records, and interprets itself.
+
+**Why it matters:**  
+Without this arc, the civic cycle has trade but no shared memory. This is the place where the archipelago begins to cohere intellectually and practically.
+
+---
+
+### 0900_narrowwater_crossing/
+
+**Role in the Civic Story Cycle:**  
+This is the **practical bottleneck and coordination-pressure layer** of the cycle.
+
+It should make civic life tangible by showing that routes are limited, timing matters, weather matters, and delays have consequences for many people at once. This arc should keep the sea central and prevent the civic cycle from becoming too town-bound.
+
+**What it should do:**
+
+- show that the archipelago’s movement creates shared pressure
+- make traffic, delay, and logistics feel real
+- force cooperation, patience, or conflict around a constrained crossing
+- connect public order directly to the physical world of sea, tide, and weather
+- make the player feel that one local blockage can become a wider civic problem
+
+**Main pressure:**  
+Movement, delay, necessity, and the friction created when many needs compete for one passage.
+
+**Why it matters:**  
+Without this arc, the civic cycle risks becoming too static. This is the place where public life becomes kinetic and materially constrained.
+
+---
+
+### 1000_old_mooring_stone/
+
+**Role in the Civic Story Cycle:**  
+This is the **mystery-pressure and dispute layer** of the cycle.
+
+It should be the place where older pattern and civic growth meet directly. Some people may want to preserve it, some study it, some dismiss it, and some wish to build around or over it. This is the point where the archipelago’s older unresolved layer becomes socially visible.
+
+**What it should do:**
+
+- place the circle-and-dot / older-pattern pressure in a civic setting
+- create disagreement around meaning, use, reverence, and practicality
+- show that mystery is no longer only found in quiet or remote places
+- deepen the tension between explanation and caution
+- keep the civic cycle connected to the larger unresolved structure of the world
+
+**Main pressure:**  
+What happens when a growing society must decide how to live beside something older that it does not fully understand.
+
+**Why it matters:**  
+Without this arc, the civic cycle becomes only social expansion. This is the place that keeps Kaleidoscope’s deeper mystery alive inside public life.
+
+---
+
+## Overall Shape
+
+Taken together, the four arcs should function like this:
+
+- `0700_tidemarket/` = **social center**
+- `0800_ledger_house/` = **institutional memory**
+- `0900_narrowwater_crossing/` = **practical coordination pressure**
+- `1000_old_mooring_stone/` = **mystery and dispute pressure**
+
+That combination gives the Civic Story Cycle a strong, balanced Ground Floor.
 
 ## Tone
 
