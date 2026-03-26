@@ -33,7 +33,7 @@ read scene
 choose action
     ↓
 move to next scene
-````
+```
 
 This loop should remain intuitive and easy to grasp.
 
