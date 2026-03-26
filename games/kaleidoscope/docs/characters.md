@@ -1,172 +1,255 @@
 # Kaleidoscope — Characters
 
-This document describes the primary characters of the Kaleidoscope Interactive Novel.
+This document describes the current character layer of the Kaleidoscope Interactive Novel.
 
-Characters are introduced gradually through scenes and story threads.  
-The goal is not to fully define every detail immediately, but to establish the core roles that shape the early narrative.
+Characters are still introduced gradually through scenes, crossings, documents, and recurring threads.  
+The purpose of this document is not to exhaustively catalogue every current figure. That role now belongs more directly to the narrative registries.
 
-Early characters serve as guides, sources of mystery, and catalysts for exploration.
+Instead, this file explains:
+
+- the kinds of characters the Interactive Novel currently uses
+- the major early figures already shaping the world
+- how character roles function within the growing archipelago
+- how the cast may expand over time
 
 ---
 
-## Character Roles
+## Current Character Layer
 
-The early narrative benefits from a small number of clear character roles.
+The current early Interactive Novel uses a **small grounded cast**.
 
-These roles help structure the story without limiting future development.
+Rather than beginning with a large ensemble, the story grows through a limited set of local figures, each attached to a place, function, or narrative pressure.
 
-Typical roles include:
+At the current stage, characters primarily serve as:
 
-- the **visionary**
-- the **guide**
-- the **skeptic**
-- the **explorer**
-- the **guardian of knowledge**
+- guides into new locations
+- carriers of rumor, custom, or practical knowledge
+- witnesses to the wider mystery
+- human anchors that make each island feel socially distinct
 
-Not every role must appear immediately, but these archetypes help organize the early cast.
+This allows the world to expand gradually without overwhelming the player or the structure.
+
+---
+
+## Current Early Character Pattern
+
+The early character layer is shaped by two overlapping patterns.
+
+### 1. Grounded Local Figures
+
+Most current characters belong to the ordinary life of the archipelago.
+
+These include:
+
+- sailors
+- merchants
+- fishers
+- caretakers
+- keepers
+- island family members
+- practical workers tied to a specific crossing or island function
+
+These figures make the archipelago feel inhabited, interdependent, and real.
+
+### 2. Indirect or Absent Figures
+
+Some important characters are not present in ordinary face-to-face form.
+
+Instead, they are encountered indirectly through:
+
+- journals
+- maps
+- notices
+- rumors
+- symbols
+- dreams
+- the interpretation of others
+
+The most important early example of this pattern is **the Visionary**.
 
 ---
 
 ## The Visionary
 
-The Visionary is a mysterious figure associated with the larger ideas that shape the Kaleidoscope world.
+The Visionary is the central absent figure of the current early story.
 
-Little is known about this individual.
+This individual is not yet a direct everyday character in the archipelago. Instead, their presence is felt through documents, maps, unfinished research, and the stories others tell.
 
-Rumors suggest that the Visionary once imagined a different kind of world — one where creativity, cooperation, and exploration replace many traditional structures of work and learning.
+The Visionary currently functions as:
 
-Fragments of the Visionary's ideas may appear in:
+- a source of unresolved mystery
+- a link between Harbor Island and older patterns beneath the archipelago
+- a figure whose ideas continue to shape events after their disappearance
+- a bridge between grounded exploration and deeper narrative pressure
 
-- journals
-- letters
-- unfinished plans
-- stories told by other characters
+The Visionary should remain partly obscured for now.
 
-The Visionary may or may not appear directly in the early story.
-
-Instead, their influence is felt through the world and its mysteries.
+Their role is strongest when felt through fragments, traces, and consequences rather than full explanation.
 
 ---
 
-## The Guide
+## Grounded Local Figures
 
-The Guide is one of the first characters players may encounter.
+The current playable world is now broad enough that the character layer can be understood through several recurring types of grounded figures.
 
-This character helps introduce players to the world and provides early direction.
+### Harbor Figures
 
-Possible traits:
+Harbor Island introduces figures who provide:
 
-- knowledgeable about local events
-- curious about the world
-- willing to answer questions
+- rumor
+- social texture
+- first explanations
+- first doubts
+- the first routes into deeper questions
 
-The Guide may provide:
+These include sailors, market figures, and other local workers who help the player understand how to move through the opening world.
 
-- rumors
-- small quests
-- introductions to other characters
+### Crossing Figures
 
-The Guide helps players understand how to explore the world.
+The archipelago is increasingly shaped by characters who connect one island to another.
 
----
+The old captain is the clearest example of this pattern.
 
-## The Skeptic
+Crossing figures matter because they make the world feel navigable by ordinary means rather than only through mystery or dream logic.
 
-The Skeptic questions the ideas associated with the Visionary.
+### Island Family Figures
 
-This character may doubt whether the Visionary's ideas are realistic or safe.
+Brinehook Island introduces the domestic layer of the archipelago through family-based island life.
 
-Possible motivations include:
+These figures show that the world is not only made of clues and ruins, but also of work, kinship, supplies, weather, and repeated crossings.
 
-- concern about unintended consequences
-- fear of change
-- loyalty to older traditions
+### Duty Figures
 
-The Skeptic introduces tension into the story and prevents the narrative from becoming one-sided.
+Lantern Key introduces characters defined by public responsibility rather than private life.
 
----
+The keeper belongs to this pattern.
 
-## The Explorer
+These figures make the archipelago feel like a functioning world that depends on maintenance, warning, and practical vigilance.
 
-The Explorer is fascinated by the unknown parts of the world.
+### Folklore and Refuge Figures
 
-This character may be searching for:
+Saint Elmo’s Rest introduces characters who stand closer to custom, caution, and inherited sailor practice.
 
-- forgotten locations
-- hidden knowledge
-- evidence of the Visionary's work
+The caretaker belongs to this pattern.
 
-Explorers encourage players to investigate new places and uncover hidden threads in the story.
+These figures do not necessarily explain the deeper mystery, but they preserve habits that suggest long contact with it.
 
 ---
 
-## The Keeper of Knowledge
+## Character Roles
 
-Some characters may act as guardians of important knowledge.
+The story still benefits from broad character roles, but these roles should now be understood more flexibly than in the earliest planning stage.
 
-These characters may appear as:
+Useful recurring roles include:
 
-- librarians
-- archivists
-- scholars
-- caretakers of ancient places
+- the **absent source of mystery**
+- the **local guide**
+- the **practical worker**
+- the **crossing figure**
+- the **keeper or caretaker**
+- the **doubter**
+- the **witness to older patterns**
 
-They may possess information about:
+These roles are not rigid classes.
 
-- the history of the world
-- earlier attempts to reshape society
-- the ideas connected to the Visionary
+A single character may perform more than one role at once.
 
-However, they may reveal this knowledge slowly or reluctantly.
+For example, a sailor may be both a guide and a doubtful witness.  
+A caretaker may be both practical and quietly tied to inherited custom.
+
+The purpose of roles is to clarify narrative function, not to freeze characters into abstractions.
 
 ---
 
 ## Character Development
 
-Characters should evolve gradually through the story.
+Characters should continue to develop gradually through:
 
-Players may learn new information about characters through:
-
-- conversations
+- repeated encounters
+- changing circumstances
 - discovered documents
-- shared experiences
-- unfolding events
+- growing trust or doubt
+- widening knowledge of the archipelago
+- contact with recurring symbols, customs, and dream pressure
 
-Characters may change their beliefs or motivations over time.
+The current cast should not remain static.
+
+As the player travels to more islands, even ordinary figures may gain greater significance through repetition, memory, and changed perspective.
+
+---
+
+## Relationship to Character Index
+
+This document is not intended to replace:
+
+- `games/kaleidoscope/story/registries/character_index.md`
+
+The character index tracks the current cast in a practical continuity-oriented way.
+
+This document serves a different purpose.
+
+It explains the **character layer as part of the design of the Interactive Novel**:
+
+- what kinds of figures the world uses
+- why those figures matter
+- how current characters function within the growing structure
+
+The registry tracks who is present.  
+This document explains how the character layer works.
 
 ---
 
 ## Expanding the Cast
 
-The initial version of the Interactive Novel should start with a very small cast.
+The cast should continue to grow gradually alongside the world.
 
-Initial target:
+New characters should be introduced when they help the story gain:
 
-- three primary characters
+- greater playability
+- stronger island identity
+- deeper continuity
+- new social or symbolic pressure
+- clearer contrast between grounded life and older mystery
 
-Additional characters can be introduced later as new regions, story threads, and narrative arcs appear.
+The goal is not to add characters merely to enlarge the cast.
 
-The goal is to allow the cast of characters to grow naturally alongside the world itself.
+The goal is to add figures whose presence helps the archipelago feel more inhabited, more connected, and more meaningful.
+
+---
 
 ## Topsy and Thorn
 
-Two unusual figures appear near the end of the earliest Kaleidoscope narratives.
+Topsy and Thorn should no longer be treated as part of the current grounded early cast of the Interactive Novel.
 
-Unlike the other characters, Topsy and Thorn do not seem to belong to any established community or tradition. Their origins are unclear, and their nature is not immediately understood.
+They are better understood as **later or outer figures** connected to the broader Kaleidoscope vision rather than the present everyday archipelago layer.
 
-They appear almost as if they are **newly awakened**, encountering the world with curiosity and uncertainty.
+They may still matter greatly to the larger project.
 
-At this stage they are simply two mysterious beings within the unfolding story. They possess no authority and no defined role within the wider world.
+But at the current stage, they do not belong to the same category as:
 
-Players may encounter them through unusual scenes or fragments of narrative that hint at deeper possibilities.
+- the sailor
+- the captain
+- the captain’s daughter
+- the keeper
+- the caretaker
+- the other local figures already shaping the playable archipelago
 
-Topsy often appears playful, inquisitive, and open to new ideas.
+For now, Topsy and Thorn should be treated as possible future-significance figures whose proper place lies in a later layer of revelation.
 
-Thorn tends to be more cautious and observant, questioning what is happening around them.
+---
 
-Together they represent two different responses to the unknown.
+## Design Principle
 
-Their true significance is not yet understood.
+The character layer should remain:
 
-Later stages of the Kaleidoscope world may reveal that these two figures are connected to the deeper evolution of the ecosystem itself.
+- gradual
+- legible
+- expandable
+- grounded enough to feel human
+- open enough to support later deepening
 
+Characters should help the world feel lived-in before they help it become fully explained.
+
+The strongest early cast is not the largest cast.
+
+It is the cast that makes the archipelago feel real while leaving room for the deeper story to unfold.

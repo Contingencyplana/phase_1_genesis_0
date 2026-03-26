@@ -1,18 +1,14 @@
 # Kaleidoscope — Story Arcs
 
-This document explains the concept of **story arcs** within the Kaleidoscope Interactive Novel.
-
-A story arc is a **cluster of related scenes** that together explore a location, narrative thread, or discovery within the world.
-
-Story arcs provide a middle layer of organization between **individual scenes** and the **overall world**.
+This document explains the current concept of **story arcs** within the Kaleidoscope Interactive Novel.
 
 ---
 
 ## Structural Layers
 
-The Kaleidoscope narrative structure can be understood as three layers:
+The current Kaleidoscope narrative structure can be understood as three primary layers:
 
-```
+```text
 scene
 ↓
 story arc
@@ -21,48 +17,80 @@ world
 ```
 
 - **Scenes** represent individual moments in the story.
-- **Story arcs** group related scenes together.
-- **The world** contains many story arcs connected through exploration.
+- **Story arcs** group related scenes into coherent clusters.
+- **The world** contains many arcs connected through travel, exploration, documents, symbols, and dreams.
 
-This layered structure allows the narrative to expand while remaining organized.
-
----
+This layered structure allows the narrative to expand without collapsing into shapeless accumulation.
 
 ## What Is a Story Arc
 
-A story arc is a **collection of scenes that belong to the same narrative area or theme**.
+A story arc is a collection of scenes that belong to the same narrative zone, function, or thematic cluster.
 
-Examples of early story arcs include:
+Some arcs are organized around:
 
+- a physical place
+- a local social role
+- a recurring mystery
+- a dream threshold
+- a transitional route
+
+An arc does not need to be large to matter.
+
+An arc only needs to gather related scenes into a structure that is readable, expandable, and playable.
+
+## Current Early Arc Structure
+
+The current early Interactive Novel includes several grounded arcs and a small dream layer.
+
+### Grounded Arcs
+
+```text
+0000_start              arrival, docks, captain routes
+0100_harbor             harbor village and market exploration
+0200_library            library investigation and Visionary documents
+0300_forest             forest path, old stones, and stone circle
+0400_brinehook          domestic island life and family rhythm
+0500_lantern_key        beacon duty, weather watch, and public infrastructure
+0600_saint_elmos_rest   refuge, sailor custom, and coastal folklore
 ```
-0000_start     starting island introduction
-0100_harbor    harbor village exploration
-0200_library   library investigation
-0300_forest    forest expedition
+
+### Dream / Threshold Arcs
+
+```text
+9000_waypoint           waypoint dream scenes
+9200_milestone          milestone dream scenes
 ```
 
-Each arc contains multiple scenes that explore the location or storyline in greater depth.
+These arcs already show that the world is growing through a mixture of:
 
----
+- grounded island expansion
+- recurring symbol logic
+- dream thresholds
+- practical archipelago life
 
 ## Scene Ranges
 
-Story arcs are organized using **scene identifier ranges**.
+Story arcs are organized using scene identifier ranges.
 
-Each arc typically occupies a block of **one hundred scene identifiers**.
+Each arc typically occupies a block of one hundred scene identifiers.
 
 Example:
 
-```
-0000–0099   starting region
-0100–0199   harbor region
-0200–0299   library region
-0300–0399   forest region
+```text
+0000–0099   arrival / dockside / captain access
+0100–0199   harbor village
+0200–0299   library
+0300–0399   forest
+0400–0499   Brinehook Island
+0500–0599   Lantern Key
+0600–0699   Saint Elmo’s Rest
+9000–9099   waypoint dream layer
+9200–9299   milestone dream layer
 ```
 
-This structure allows each arc to grow without requiring scene renumbering.
+This structure allows each arc to grow without requiring widespread scene renumbering.
 
----
+It also makes it easier to reason about the world in clear expandable blocks.
 
 ## Folder Organization
 
@@ -70,72 +98,98 @@ Story arcs correspond directly to folders inside the scenes directory.
 
 Example structure:
 
-```
+```text
 games/kaleidoscope/story/scenes/
 
 0000_start/
-    scene_0001.md
-    scene_0002.md
-
 0100_harbor/
-    scene_0101.md
-    scene_0102.md
-
 0200_library/
-    scene_0201.md
-    scene_0202.md
-
 0300_forest/
-    scene_0301.md
-    scene_0302.md
+0400_brinehook/
+0500_lantern_key/
+0600_saint_elmos_rest/
+9000_waypoint/
+9200_milestone/
 ```
 
 Each folder contains scenes belonging to a specific arc.
 
----
+This keeps the scene tree readable while allowing the world to expand arc by arc.
 
 ## Relationship to the Scene Graph
 
-The **scene graph** connects scenes across arcs through player choices.
+The scene graph connects scenes across arcs through player choices.
 
-Example:
+For example, the player may move from:
 
+```text
+arrival scene
+    ↓
+harbor scene
+    ↓
+captain scene
+    ↓
+outer island scene
+    ↓
+dream scene
 ```
-scene_0001
-   ↓
-scene_0101
-   ↓
-scene_0201
-```
 
-This allows the story to move between different arcs as the player explores the world.
+This means story arcs and scene graph are related but not identical.
 
-Story arcs organize scenes, while the scene graph defines how those scenes connect.
+- Story arcs organize scenes into readable clusters.
+- The scene graph defines how the player actually moves between them.
 
----
+The graph may cross arc boundaries often. That is expected.
+
+## Current Arc Pattern
+
+At the current stage, arcs are beginning to perform different world functions.
+
+For example:
+
+- Harbor Island introduces the opening mystery and first social world
+- Brinehook introduces family and domestic interdependence
+- Lantern Key introduces public duty and navigational infrastructure
+- Saint Elmo’s Rest introduces refuge, caution, and inherited sailor custom
+- dream arcs mark thresholds, recurrence, and the deeper pressure beneath the grounded world
+
+This is important because future arcs do not need to repeat the same narrative function.
+
+They can widen the world by adding new kinds of places, pressures, and meanings.
 
 ## Expansion of Story Arcs
 
 As the Kaleidoscope world grows, additional arcs may be added.
 
-Examples might include:
+Future arcs may include:
 
-```
-0400_ruins
-0500_outer_islands
-0600_visionary_mystery
-```
+- additional inhabited islands
+- outer crossing routes
+- public or civic islands
+- ruins or old structures
+- stronger symbolic or mythic zones
+- larger dream or threshold sequences
 
-Each arc introduces new scenes, characters, and discoveries while remaining compatible with the existing scene structure.
+New arcs should be added when they improve either:
 
----
+- playability
+- world depth
+- narrative clarity
+- structural survivability
+
+They should not be added only for the sake of multiplying folders.
 
 ## Design Philosophy
 
 Story arcs should remain:
 
-- simple
 - readable
 - expandable
+- distinct
+- structurally useful
 
-The purpose of arcs is to keep large collections of scenes organized while allowing the world to grow naturally through exploration and discovery.
+Their purpose is not merely to store scenes.
+
+Their purpose is to help the world grow in a way that remains legible to players, builders, and future automation.
+
+A good arc should make the world feel larger while keeping the current layer of growth coherent.
