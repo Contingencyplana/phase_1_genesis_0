@@ -1,4 +1,4 @@
-# Civic Story Cycle
+# Cycle 001 — Civic
 
 ## Purpose
 

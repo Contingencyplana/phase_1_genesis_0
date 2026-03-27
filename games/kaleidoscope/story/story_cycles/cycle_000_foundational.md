@@ -1,4 +1,4 @@
-# Foundational Story Cycle
+# Cycle 000 — Foundational
 
 ## Purpose
 
