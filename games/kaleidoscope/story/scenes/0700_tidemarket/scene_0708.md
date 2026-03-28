@@ -38,6 +38,6 @@ It is inside civic expansion itself.
 
 ## Choices
 
-- Ask where the old site lies → scene_0706
+- Ask where the old site lies → scene_1001
 - Return to Gathering Lane → scene_0706
 - Return toward the harborfront → scene_0702
