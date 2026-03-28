@@ -30,6 +30,8 @@ In Tidemarket, this is where argument becomes record.
 
 ## Choices
 
+- Follow a contested unloading claim to the intake desk → scene_0802
+- Review route amendments at the archive table → scene_0803
 - Return to the notice board → scene_0705
 - Head back toward the harborfront → scene_0702
 - Cut through toward Gathering Lane → scene_0706

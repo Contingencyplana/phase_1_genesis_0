@@ -34,6 +34,7 @@ The crowd shifts, split between following him and drifting back to work.
 
 ## Choices
 
+- Contest the unloading sequence in writing at Ledger House → scene_0802
 - Follow the matter toward the route notices → scene_0705
 - Slip away into the gathering lane → scene_0706
 - Return to the market quarter → scene_0703

@@ -332,7 +332,7 @@ Links: 0704, 0706, 0702
 **scene_0704** — A Harbor Argument  
 Location: Between Harborfront and Market Quarter  
 Purpose: Public dispute scene between the wharf clerk and traders over unloading sequence; shows civic friction over shared logistics.  
-Links: 0705, 0706, 0703
+Links: 0802, 0705, 0706, 0703
 
 **scene_0705** — The Notice Board  
 Location: Wharf Office / Route Board  
@@ -356,12 +356,22 @@ Links: 1001, 0706, 0702
 
 ---
 
-## Ledger House Scenes (0801)
+## Ledger House Scenes (0801-0803)
 
 **scene_0801** — Ledger House  
 Location: Ledger House / Inland Records Hall  
-Purpose: Civic records hub; shows where route disputes, cargo tallies, and route corrections become permanent record; marks the institutional memory layer of the civic cycle.  
-Links: 0705, 0702, 0706
+Purpose: Entry foyer for the Ledger House arc; establishes the institutional-memory setting and routes the player toward intake or amendments workflow.  
+Links: 0802, 0803, 0705, 0702, 0706
+
+**scene_0802** — Intake Desk for Contested Sequence  
+Location: Ledger House / Claims Intake Desk  
+Purpose: Dispute-intake scene where unloading-order contests are converted into written claims and deferred sequence for review.  
+Links: 0803, 0705, 0706
+
+**scene_0803** — Route Amendments at the Archive Table  
+Location: Ledger House / Route Amendments and Archive Table  
+Purpose: Reconciliation scene where weather corrections, channel updates, and intake claims are merged into durable route record.  
+Links: 0802, 0705, 0707
 
 ---
 
