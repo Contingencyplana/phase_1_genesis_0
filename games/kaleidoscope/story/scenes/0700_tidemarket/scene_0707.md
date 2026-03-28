@@ -32,6 +32,6 @@ It is the hidden structure under public life.
 
 ## Choices
 
-- Ask why Narrowwater causes so much delay → scene_0705
+- Ask why Narrowwater causes so much delay → scene_0901
 - Return to Gathering Lane → scene_0706
 - Return to the notice board → scene_0705
