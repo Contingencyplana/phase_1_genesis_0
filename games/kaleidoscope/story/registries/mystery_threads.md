@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current Harbor Island mystery structure with playable expansions to Brinehook Island, Lantern Key, and Saint Elmo's Rest.
+Current Harbor Island mystery structure with playable expansions to Brinehook Island, Lantern Key, Saint Elmo's Rest, and Tidemarket.
 
 ---
 
@@ -20,9 +20,9 @@ An unnamed scholar visited Harbor Island at an unknown point in the past. They l
 ## The Circle-and-Dot Symbol
 
 **What is established:**  
-A simple symbol — a circle enclosing a single dot — appears repeatedly across Harbor Island. It is found in the Visionary's journals and library shelves, scratched into the old forest signpost, carved into a stone in the soil of the forest path, and cut deeply into the central slab of the stone circle. The same symbol appears on the stone marker in the Waypoint dream. A faint, heavily eroded version is present on a weathered marker on Brinehook's lookout rise, another worn instance appears on an older foundation stone beneath Lantern Key's tower works, and a faint salt-worn mark appears on an old resting stone at Saint Elmo's Rest. No character has yet explained its origin or meaning within the story.
+A simple symbol — a circle enclosing a single dot — appears repeatedly across Harbor Island. It is found in the Visionary's journals and library shelves, scratched into the old forest signpost, carved into a stone in the soil of the forest path, and cut deeply into the central slab of the stone circle. The same symbol appears on the stone marker in the Waypoint dream. A faint, heavily eroded version is present on a weathered marker on Brinehook's lookout rise, another worn instance appears on an older foundation stone beneath Lantern Key's tower works, and a faint salt-worn mark appears on an old resting stone at Saint Elmo's Rest. No character has yet explained its origin or meaning within the story. At the Old Mooring Stone on Tidemarket's older waterfront margin (scene_1001), a worn marking predates current quay works; the player does not recognize it as the circle-and-dot from the library or forest. Whether the two markings are related remains unresolved.
 
-**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 0607, 9001, 9201  
+**Key scenes:** 0204, 0205, 0206, 0301, 0302, 0304, 0407, 0507, 0607, 9001, 9201 (see also 1001 — distinct marking of uncertain relation)  
 **Current status:** Active and recurring across multiple inhabited islands. The symbol has been encountered by the player in several physical sites plus dream scenes (Waypoint and the milestone priestess dream).  
 **Likely future direction:** The symbol likely connects the island's stone sites to a wider network. Expanding to other islands may reveal whether the symbol appears elsewhere, and whether the Visionary found its source.
 
@@ -69,3 +69,14 @@ Several threads suggest an archipelago beyond Harbor Island. The Visionary's map
 **Key scenes:** 0205, 9001, 0012, 0107, 0401, 0402, 0406, 0408, 0501, 0502, 0504, 0506, 0508, 0601, 0602, 0605, 0606, 0608  
 **Current status:** Expanded but still partial. Three nearby islands (Brinehook, Lantern Key, and Saint Elmo's Rest) are now playable, while the broader network remains mostly unknown.  
 **Likely future direction:** Further islands can continue the proven grounded pattern: practical local functions first, deeper mystery signals second. Saint Elmo's Rest also establishes how ordinary sailors preserve old customs around places they do not fully understand.
+
+---
+
+## The Old Mooring Stone and the Civic Margin
+
+**What is established:**  
+At Tidemarket's expanding waterfront, an old mooring stone predates the current quay works. Locals are divided: move it to square the berth lines, preserve it as a historical marker, or at minimum have a survey crew read it properly before building over it. The stone bears a worn marking the player does not recognize from the library or forest — something older, worn almost smooth by centuries of salt and wind. The dispute makes clear that old sites are no longer confined to forests and ruins; here, older mystery lives inside ordinary civic infrastructure.
+
+**Key scenes:** 0708, 1001  
+**Current status:** Introduced. The stone is physically reachable and its marking is observed. No character names or explains the mark. The survey crew exists only as a suggestion in the dispute. The stone's origin and significance are unresolved.  
+**Likely future direction:** The marking may connect to the circle-and-dot network, predate it, or be entirely separate. The civic tension — expand vs. preserve — is the first mystery-pressure to appear inside active development rather than wilderness sites, and may recur across other islands as the archipelago grows.

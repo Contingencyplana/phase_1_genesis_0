@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current playable Harbor Island, Brinehook Island, Lantern Key, and Saint Elmo's Rest scenes.
+Current playable Harbor Island, Brinehook Island, Lantern Key, Saint Elmo's Rest, and Tidemarket civic-cycle scenes.
 
 ## Format
 
@@ -19,8 +19,8 @@ Links: 0002, 0003, 0004
 
 **scene_0002** — Harbor Village  
 Location: Harbor Village  
-Purpose: Central hub for Harbor Island navigation; distributes player toward sailors, library, forest, and docks.  
-Links: 0101, 0003, 0004, 0010
+Purpose: Central hub for Harbor Island navigation; distributes player toward sailors, market, library, forest, and docks.  
+Links: 0101, 0105, 0003, 0004, 0010
 
 **scene_0003** — The Library on the Hill  
 Location: Library Hill  
@@ -103,8 +103,8 @@ Links: 0109, 0105, 0002
 
 **scene_0109** — Exploring Harbor Island  
 Location: Harbor Market  
-Purpose: Fisherman reflects on the island's unexplored size; player directed toward library or forest.  
-Links: 0003, 0004, 0105, 0002
+Purpose: Fisherman reflects on the island's unexplored size; player directed toward library, forest, or Tidemarket ferry.  
+Links: 0003, 0004, 0105, 0701, 0002
 
 ---
 
@@ -309,3 +309,74 @@ Links: 0002
 Location: Dream  
 Purpose: Milestone dream on a fog-shrouded roving island; a priestess speaks in symbolic language about returning tides, folded moments, and lives nested within dreams.  
 Links: 0010
+
+---
+
+## Tidemarket Scenes (0701–0708)
+
+**scene_0701** — Arrival at Tidemarket  
+Location: Tidemarket Harborfront  
+Purpose: Public ferry arrival; first impression of Tidemarket as a larger, faster, more socially pressured civic port.  
+Links: 0702, 0703, 0705
+
+**scene_0702** — The Harborfront  
+Location: Tidemarket Harborfront  
+Purpose: Harborfront hub; introduces the wharf clerk, route board, and the organized disorder of the main landing.  
+Links: 0704, 0703, 0705
+
+**scene_0703** — Market Quarter  
+Location: Tidemarket Market Quarter  
+Purpose: Dense market hub; introduces the spice seller and practical supply pressure; seeds talk of delay and cargo frustration.  
+Links: 0704, 0706, 0702
+
+**scene_0704** — A Harbor Argument  
+Location: Between Harborfront and Market Quarter  
+Purpose: Public dispute scene between the wharf clerk and traders over unloading sequence; shows civic friction over shared logistics.  
+Links: 0705, 0706, 0703
+
+**scene_0705** — The Notice Board  
+Location: Wharf Office / Route Board  
+Purpose: Route board hub; introduces the Ledger House as offline record-keeper; first named mention of the Ledger House.  
+Links: 0801, 0702, 0706
+
+**scene_0706** — Gathering Lane  
+Location: Tidemarket Gathering Lane  
+Purpose: Social hub where gossip, rumor, and practical advice accumulate; seeds Narrowwater pressure and old-site unease.  
+Links: 0707, 0708, 0703
+
+**scene_0707** — View Toward Narrowwater  
+Location: Overlook toward the Inner Channels  
+Purpose: Elevated view of the inner channel bottleneck; introduces the Ferry Marshal; seeds Narrowwater delay as systemic pressure.  
+Links: 0901, 0706, 0705
+
+**scene_0708** — Rumor of the Old Mooring Stone  
+Location: Edge of Tidemarket / Older Waterfront Margin  
+Purpose: Civic dispute scene over a contested older stone; introduces the older-mystery layer inside expansion itself.  
+Links: 1001, 0706, 0702
+
+---
+
+## Ledger House Scenes (0801)
+
+**scene_0801** — Ledger House  
+Location: Ledger House / Inland Records Hall  
+Purpose: Civic records hub; shows where route disputes, cargo tallies, and route corrections become permanent record; marks the institutional memory layer of the civic cycle.  
+Links: 0705, 0702, 0706
+
+---
+
+## Narrowwater Crossing Scenes (0901)
+
+**scene_0901** — The Ferry Marshal on Narrowwater  
+Location: Overlook toward the Inner Channels  
+Purpose: The Ferry Marshal explains the tidal passage structure that produces systemic delay; grounds civic friction in physical geography.  
+Links: 0707, 0706
+
+---
+
+## Old Mooring Stone Scenes (1001)
+
+**scene_1001** — The Old Mooring Stone  
+Location: Edge of Tidemarket / Older Waterfront Margin  
+Purpose: Player reaches the disputed older marker; the stone is present, weathered, and marked; the civic-expansion vs. older-caution pressure becomes concrete.  
+Links: 0708, 0706

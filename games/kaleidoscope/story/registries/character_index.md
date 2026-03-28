@@ -104,6 +104,46 @@ Current Harbor Island plus nearby Brinehook, Lantern Key, and Saint Elmo's Rest 
 
 ---
 
+## The Ferry Marshal
+
+**Current location:** Tidemarket, overlook above the inner channels  
+**Role:** Practical route authority; named keeper of Narrowwater crossing order  
+**What they know or imply:**  
+- Manages the Narrowwater passage schedule and channel flag system  
+- Explains that Narrowwater is four overlapping passages whose safe combinations shift with tide and wind  
+- Frames systemic delay as a physical geography problem, not a failure of management  
+- Refers to himself by title when pressed, with dry formality  
+
+**Scenes:** 0707, 0901
+
+---
+
+## The Wharf Clerk
+
+**Current location:** Tidemarket Harborfront, at a standing desk near the wharf office  
+**Role:** Practical logistics functionary; intake point for cargo sequences and complaints  
+**What they know or imply:**  
+- Stamps slips, takes names, and directs workers and couriers without pausing for long exchanges  
+- Directs contested unloading priorities toward the notice board rather than resolving them in the carry path  
+- Represents the hardworking face of civic coordination under constant pressure  
+
+**Scenes:** 0702 (present), 0704
+
+---
+
+## The Market Spice Seller
+
+**Current location:** Tidemarket Market Quarter, at a corner stall  
+**Role:** Ambient civic voice; practical commentary on supply delay and trade frustration  
+**What they know or imply:**  
+- Deals in spice and short-supply goods affected by route delays  
+- Notes that delays travel farther than boats  
+- Speaks in the voice of Tidemarket pragmatism: take what is available now or wait and complain with everyone else  
+
+**Scenes:** 0703, 0704
+
+---
+
 ## The Visionary (historical / indirect)
 
 **Current location:** Unknown — last known heading inland into the island forest  
