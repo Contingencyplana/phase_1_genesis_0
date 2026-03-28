@@ -41,6 +41,6 @@ Behind the noise of the quay, you can feel a larger coordinating structure at wo
 
 ## Choices
 
-- Ask what is kept at the Ledger House → scene_0706
+- Go to the Ledger House → scene_0801
 - Return to the harborfront → scene_0702
 - Head toward the gathering lane → scene_0706
