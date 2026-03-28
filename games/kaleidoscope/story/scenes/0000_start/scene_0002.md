@@ -30,6 +30,7 @@ Where would you like to go?
 ## Choices
 
 - Speak with one of the sailors → scene_0101
+- Explore the harbor market → scene_0105
 - Visit the library on the hill → scene_0003
 - Follow the forest path → scene_0004
 - Return to the docks → scene_0010
