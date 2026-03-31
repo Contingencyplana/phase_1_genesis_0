@@ -29,3 +29,4 @@ It is louder, denser, and more entangled than anything in the foundational islan
 ## Choices
 
 - Sail back to Harbor Island → scene_0010
+- Speak with someone about inland travel → scene_1101

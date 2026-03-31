@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current Harbor Island plus nearby Brinehook, Lantern Key, and Saint Elmo's Rest characters; Tidemarket and civic-cluster characters. Includes named roles, recurring figures, and one historical character known only through documents.
+Current Harbor Island plus nearby Brinehook, Lantern Key, and Saint Elmo's Rest characters; Tidemarket and civic-cluster characters; and the Deep Roads foothold character layer. Includes named roles, recurring figures, and one historical character known only through documents.
 
 ---
 
@@ -172,3 +172,17 @@ Current Harbor Island plus nearby Brinehook, Lantern Key, and Saint Elmo's Rest 
 - Makes the Ledger House feel less dramatic than the waterfront and more consequential  
 
 **Scenes:** 0801, 0802, 0803
+
+---
+
+## The Guide
+
+**Current location:** Inland Archives, at the route table beside copied ledgers and older path sheets  
+**Role:** Practical inland-route guide; connects civic records, survey traces, and expedition planning  
+**What they know or imply:**  
+- Treats inland travel as a matter of comparing mismatched records until a real path emerges  
+- Recognizes that civic route notes, old surveys, and older rubbings sometimes describe the same ground under different names  
+- Frames investigation as deliberate preparation rather than wandering or revelation  
+- Suggests the archipelago's stored knowledge has begun pointing inland in ways earlier clerks did not fully understand  
+
+**Scenes:** 1101, 1102, 1103

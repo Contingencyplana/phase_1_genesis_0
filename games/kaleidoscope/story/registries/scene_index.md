@@ -2,7 +2,7 @@
 
 ## Scope
 
-Current playable Harbor Island, Brinehook Island, Lantern Key, Saint Elmo's Rest, and civic-cycle scenes: Tidemarket, Ledger House, Narrowwater Crossing, and Old Mooring Stone.
+Current playable Harbor Island, Brinehook Island, Lantern Key, Saint Elmo's Rest, civic-cycle scenes (Tidemarket, Ledger House, Narrowwater Crossing, Old Mooring Stone), and the Deep Roads foothold arc Expedition Base.
 
 ## Format
 
@@ -425,3 +425,22 @@ Links: 1004, 1002
 Location: Edge of Tidemarket / Temporary Work Marker  
 Purpose: Temporary civic-management scene where the dispute is procedurally deferred and consequences propagate into notices, records, and market timing.  
 Links: 0705, 0803, 0703
+
+---
+
+## Expedition Base Scenes (1101-1103)
+
+**scene_1101** — Inland Archives  
+Location: Inland Archives / Expedition Room  
+Purpose: Deep Roads foothold entry scene; civic records, route copies, and older survey materials are gathered into a working archive for organized inland inquiry.  
+Links: 1102, 1103, 0709
+
+**scene_1102** — The Guide  
+Location: Inland Archives / Route Table  
+Purpose: Route-guide scene introducing a practical figure who connects civic paperwork, older path traces, and inland travel logic without turning the inquiry mystical.  
+Links: 1103, 1101
+
+**scene_1103** — Maps and Contradiction  
+Location: Inland Archives / Comparison Table  
+Purpose: Comparison-table scene where civic route copies, older survey traces, and a Visionary note all point toward the same inland continuation, making organized discovery feel real.  
+Links: 1102, 1101
