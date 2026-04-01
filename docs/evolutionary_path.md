@@ -1012,7 +1012,7 @@ In this sense, Kaleidoscope explores the possibility that **play may become one 
 
 ---
 
-## Summary
+## Conclusion
 
 The Kaleidoscope ecosystem evolves through twelve stages grouped into four major layers.
 
