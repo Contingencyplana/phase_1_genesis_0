@@ -790,17 +790,19 @@ In combination with the Main Evolutionary Ladder and the Safety Architecture Evo
 
 ---
 
-## Institutions of Stewardship — Valiant Citadels and Squire Foundries
+## Institutions of Stewardship — Citadels, Valiant Citadels, and Squire Foundries
 
 As the Kaleidoscope ecosystem grows into a large and complex civilization of participants, stewardship begins to take institutional form.
 
 Rather than relying on centralized authority, Kaleidoscope encourages the emergence of distributed institutions dedicated to maintaining the stability, safety, and long-term health of the ecosystem.
 
-These institutions are collectively referred to as **Citadels**.
+At a broad level, these institutions may be referred to collectively as **Citadels**.
 
-Citadels serve as centers of stewardship where experienced participants coordinate efforts to observe the ecosystem, evaluate emerging technologies, and guide long-term development.
+As they mature into more formal and developed centers of stewardship, some may take the more specific form of **Valiant Citadels**.
 
-Several roles may emerge within these institutions.
+These institutions serve as centers of stewardship where experienced participants coordinate efforts to observe the ecosystem, evaluate emerging technologies, guide long-term development, and help preserve the cooperative culture within which powerful systems can safely emerge.
+
+Several important roles may arise within these institutions.
 
 **Knights of the Citadel**  
 Knights are experienced participants who actively help safeguard the ecosystem.  
@@ -812,27 +814,59 @@ They help guide long-term governance frameworks, coordinate large collaborative 
 
 Their role is not to command the ecosystem, but to help maintain its **long-term coherence and stability**.
 
-**AI Squires**
+These roles should be understood primarily as **stewardship and governance roles** within the broader institutional life of the Citadel.
 
+**AI Squires**  
 As artificial intelligence systems begin participating in Kaleidoscope, some may take on roles similar to human apprentices.
 
-These **AI Squires** assist with tasks such as simulation analysis, tool development, and monitoring system behavior.
+These **AI Squires** assist with tasks such as simulation analysis, tool development, monitoring system behavior, observability support, and other bounded forms of cooperative assistance.
 
 They operate within carefully designed safety boundaries and learn through interaction with human participants.
 
 Over time they may become valuable collaborators in maintaining the ecosystem.
 
-**Valiant Citadels and Squire Foundries**
+AI Squires should be understood as **bounded support roles**, not as replacements for human stewardship or sources of independent institutional authority.
 
-As stewardship expands, specialized environments may emerge where both human and AI participants collaborate to develop new tools, safety systems, and experimental worlds.
+### Valiant Citadels
 
-These environments — sometimes referred to as **Valiant Citadels** — function as centers of experimentation, training, and cooperative engineering.
+As stewardship expands, some Citadels may develop into more mature and specialized institutions known as **Valiant Citadels**.
 
-Within them, new generations of contributors — including both human participants and AI Squires — may learn the principles of safe experimentation, responsible development, and cooperative governance.
+A Valiant Citadel functions as a broader umbrella institution of stewardship, experimentation, training, review, and cooperative engineering.
 
-Together these institutions form the **cultural backbone of stewardship** within Kaleidoscope.
+Within such institutions, human participants may help:
 
-They ensure that as the ecosystem grows more powerful and complex, it remains guided by a community committed to curiosity, cooperation, and responsibility.
+- evaluate emerging technologies
+- preserve safety culture
+- train new contributors
+- coordinate large-scale stewardship efforts
+- maintain lawful and cooperative development over time
+
+In this way, Valiant Citadels become major centers of long-range civilizational stewardship within Kaleidoscope.
+
+### Squire Foundries
+
+Alongside Valiant Citadels, more specialized institutions may also emerge for the bounded formation and refinement of artificial support participants.
+
+These may take the form of **Squire Foundries**.
+
+A Squire Foundry is not the same kind of institution as a Valiant Citadel.
+
+It is a more specialized environment dedicated to the training, limitation, and lawful development of AI Squires and related support systems.
+
+Within Squire Foundries, bounded artificial participants may be formed and trained for roles such as:
+
+- simulation support
+- observability assistance
+- lawful recordkeeping
+- diagnostic work
+- limited tool development
+- other subordinate support functions
+
+In this way, Squire Foundries remain related to the broader stewardship structure of Kaleidoscope while serving a more specific purpose.
+
+Together, Citadels, Valiant Citadels, and Squire Foundries form part of the **cultural backbone of stewardship** within Kaleidoscope.
+
+They help ensure that as the ecosystem grows more powerful and complex, it remains guided by institutions and participants committed to curiosity, cooperation, responsibility, and long-term safety.
 
 ---
 
