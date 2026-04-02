@@ -37,4 +37,5 @@ It is the first time the archipelago's stored knowledge feels as if it is leanin
 ## Choices
 
 - Speak with the guide about the contradiction → scene_1102
+- Take the inland continuation as a field check → scene_1201
 - Return to the archives room → scene_1101

@@ -443,4 +443,23 @@ Links: 1103, 1101
 **scene_1103** — Maps and Contradiction  
 Location: Inland Archives / Comparison Table  
 Purpose: Comparison-table scene where civic route copies, older survey traces, and a Visionary note all point toward the same inland continuation, making organized discovery feel real.  
-Links: 1102, 1101
+Links: 1102, 1201, 1101
+
+---
+
+## Inland Routes Scenes (1201-1203)
+
+**scene_1201** — Inland Departure  
+Location: Inland Archives / Departure Yard  
+Purpose: Threshold departure scene where archive contradiction turns into practical movement procedure through inland carrier prep, route windows, and named path handling.  
+Links: 1202, 1103
+
+**scene_1202** — Route Names That Do Not Match  
+Location: Inland Rise Path / Marker Cut  
+Purpose: Path-logic scene showing that civic names, survey marks, and spoken route labels differ while still mapping the same working inland line.  
+Links: 1203, 1201
+
+**scene_1203** — Convergence at the Split Marker  
+Location: Inland Route Split / Shelf Above the Storage Rise  
+Purpose: Partial-confirmation scene where route tally and branch evidence verify that inland continuation is active terrain structure, not rumor.  
+Links: 1101, 1202
