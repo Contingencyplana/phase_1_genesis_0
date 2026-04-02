@@ -146,7 +146,7 @@ This keeps the mystery widening without overwhelming the archipelago.
 
 ## Structural Meaning of the Foundational Cycle
 
-The foundational cycle established the first balanced relationship between:
+The Foundational Cycle established the first balanced relationship between:
 
 - grounded island life
 - practical travel

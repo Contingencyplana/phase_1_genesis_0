@@ -16,13 +16,13 @@ The ferryman collects slips without looking up, then waves a short signal to a b
 
 Tidemarket recedes behind you: the notice board fading to a smear of white above the roof of the wharf office, the harborfront lanes still audible but no longer legible, the older waterfront margin holding its stone in patient silence where newer quay work is still figuring out what to do with it.
 
-The water takes up.
+The water takes over again.
 
 Harbor Island sits in its familiar position across the open channel, unhurried by the pace you are leaving behind.
 
 You have been inside the civic layer of the archipelago.
 
-It is louder, denser, and more entangled than anything in the foundational islands, and yet it is built from the same sea and the same ordinary need.
+It is louder, denser, and more entangled than anything in the Foundational Islands, and yet it is built from the same sea and the same ordinary need.
 
 ---
 

@@ -41,7 +41,7 @@ It expands the world by showing:
 - the accumulation of shared records, notices, and memory
 - stronger friction between practical order and inherited caution
 
-If the foundational cycle proved that the archipelago is real, inhabited, and patterned, then Tidemarket begins to prove that it can also become socially dense and publicly organized.
+If the Foundational Cycle proved that the archipelago is real, inhabited, and patterned, then Tidemarket begins to prove that it can also become socially dense and publicly organized.
 
 Tidemarket is therefore the main anchor of the Civic Story Cycle.
 

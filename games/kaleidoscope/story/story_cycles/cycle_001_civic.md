@@ -70,7 +70,7 @@ This shape creates:
 - one practical pressure point
 - one mystery-pressure point
 
-That makes it the most suitable Ground Floor built on top of the foundational cycle.
+That makes it the most suitable Ground Floor built on top of the Foundational Cycle.
 
 ---
 
@@ -129,7 +129,7 @@ It begins to feel like a living network.
 
 ### Public Memory
 
-The foundational cycle established local memory, local custom, and local traces.
+The Foundational Cycle established local memory, local custom, and local traces.
 
 The civic story cycle should begin showing memory that is:
 
@@ -300,7 +300,7 @@ The civic story cycle should feel:
 - still coastal
 - still exploratory
 - still grounded
-- slightly tenser than the foundational cycle
+- slightly tenser than the Foundational Cycle
 - increasingly aware that shared life creates both order and friction
 
 The mystery should remain present, but it should now be felt in a world where more people are trying to live around it.
