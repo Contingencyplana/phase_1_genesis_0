@@ -37,4 +37,4 @@ Paths that stayed useful kept being renamed by whoever had to file them.
 ## Choices
 
 - Continue along the inward continuation beyond the rise → scene_1203
-- Turn back to the departure yard → scene_1201
+- Turn back to Departure Yard → scene_1201

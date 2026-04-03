@@ -12,7 +12,7 @@ Inland Archives / Departure Yard
 
 The workroom quiet does not follow you outside.
 
-In the departure yard below, carriers are tightening straps, checking boot wraps, and balancing loads that have to survive stone, slope, and sudden rain.
+In the Departure Yard below, carriers are tightening straps, checking boot wraps, and balancing loads that have to survive stone, slope, and sudden rain.
 
 A narrow board fixed to a post lists route names, older aliases, and weather cautions in different hands.
 
