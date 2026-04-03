@@ -34,3 +34,4 @@ Where would you like to go?
 - Visit the library on the hill → scene_0003
 - Follow the forest path → scene_0004
 - Return to the docks → scene_0010
+- Find a place to rest for the night → scene_9001
